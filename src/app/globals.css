@@ -212,7 +212,7 @@ html, body {
   margin: 0;
 }
 
-/* Header Inner Layout - Flex row for single-line nav with proper vertical alignment */
+/* Header Inner Section - VERTICAL CENTERING via flex */
 #masthead .elementor-section-57274c4 {
   display: flex;
   align-items: center;
@@ -224,107 +224,85 @@ html, body {
   position: relative;
 }
 
-/* Override Elementor 3-column grid - use flex instead */
-#masthead .elementor-section-57274c4 > .elementor-container {
+/* Desktop Navigation Row */
+.header-desktop-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 100%;
-  gap: 20px;
+  gap: 30px;
 }
 
-/* Logo column - shrink-wrap, center content */
-#masthead .elementor-section-57274c4 .elementor-col-33:first-child {
-  flex: 0 0 auto;
+/* Logo */
+.header-logo a {
   display: flex;
   align-items: center;
 }
 
-/* Navigation column - take remaining space, center content */
-#masthead .elementor-section-57274c4 .elementor-col-33:nth-child(2) {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* CTA column - shrink-wrap, center content */
-#masthead .elementor-section-57274c4 .elementor-col-33:nth-child(3) {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-/* Ensure Elementor widget wrappers don't break vertical alignment */
-#masthead .elementor-widget-wrap {
-  display: flex;
-  align-items: center;
-}
-
-#masthead .elementor-widget-wrap.elementor-element-populated {
-  display: flex;
-  align-items: center;
-}
-
-/* Elementor image widget - center its content */
-#masthead .elementor-element-4572164c {
-  display: flex;
-  align-items: center;
-}
-
-/* Elementor nav menu widget */
-#masthead .elementor-element-6afc2782 {
-  display: flex;
-  align-items: center;
-}
-
-/* Elementor button widget */
-#masthead .elementor-element-703b2ab4 {
-  display: flex;
-  align-items: center;
-}
-
-/* Logo image sizing */
-#masthead .elementor-4572164c img {
+.header-logo img {
   max-width: 180px;
   height: auto;
 }
 
-/* Navigation Menu - horizontal flex */
-.hfe-nav-menu {
+/* Desktop Navigation Menu */
+.header-nav-menu {
+  flex: 1;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: nowrap;
-  white-space: nowrap;
 }
 
-.hfe-nav-menu li {
+.header-nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.header-nav-list li {
   flex: 0 0 auto;
 }
 
-.hfe-nav-menu a {
+.header-nav-link {
   color: #333;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
-  padding: 8px 10px;
+  padding: 8px 12px;
   transition: color 0.3s;
   white-space: nowrap;
+  display: block;
 }
 
-.hfe-nav-menu a:hover {
+.header-nav-link:hover {
   color: #0083dd;
 }
 
 /* CTA Button */
-#masthead .elementor-button {
+.header-cta {
+  flex: 0 0 auto;
+}
+
+.header-cta-button {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #4E82F1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
   white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.header-cta-button:hover {
+  background: #4E6BD6;
+  color: #fff;
 }
 
 /* Mobile Menu Toggle - Hidden on desktop */
-.mobile-menu-toggle {
+.header-mobile-toggle {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -339,7 +317,7 @@ html, body {
   flex-shrink: 0;
 }
 
-.hamburger-line {
+.header-mobile-toggle .hamburger-line {
   display: block;
   width: 25px;
   height: 3px;
@@ -348,23 +326,23 @@ html, body {
   transition: transform 0.3s, opacity 0.3s;
 }
 
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+.header-mobile-toggle.active .hamburger-line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+.header-mobile-toggle.active .hamburger-line:nth-child(2) {
   opacity: 0;
 }
 
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+.header-mobile-toggle.active .hamburger-line:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile Navigation Menu - Hidden by default on mobile */
-.mobile-nav-menu {
+/* Mobile Navigation Menu - Hidden by default */
+.header-mobile-menu {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 80px;
   left: 0;
   right: 0;
   background: #fff;
@@ -375,11 +353,11 @@ html, body {
   transition: max-height 0.3s ease;
 }
 
-.mobile-nav-menu.open {
-  max-height: 500px;
+.header-mobile-menu.open {
+  max-height: 400px;
 }
 
-.mobile-nav-list {
+.header-mobile-nav-list {
   list-style: none;
   margin: 0;
   padding: 15px 20px;
@@ -388,7 +366,7 @@ html, body {
   gap: 5px;
 }
 
-.mobile-nav-link {
+.header-mobile-nav-link {
   display: block;
   padding: 12px 15px;
   color: #333;
@@ -399,12 +377,12 @@ html, body {
   transition: background 0.3s;
 }
 
-.mobile-nav-link:hover {
+.header-mobile-nav-link:hover {
   background: #f5f5f5;
   color: #333;
 }
 
-.mobile-cta-button {
+.header-mobile-cta {
   display: block;
   margin-top: 10px;
   padding: 12px 25px;
@@ -418,83 +396,63 @@ html, body {
   transition: background 0.3s;
 }
 
-.mobile-cta-button:hover {
+.header-mobile-cta:hover {
   background: #4E6BD6;
   color: #fff;
 }
 
-/* Tablet/Mobile Responsive */
+/* Tablet Responsive */
 @media (max-width: 1024px) {
   #masthead .elementor-section-57274c4 {
     min-height: 70px;
     padding: 0 20px;
   }
   
-  #masthead .elementor-section-57274c4 > .elementor-container {
-    gap: 15px;
+  .header-desktop-nav {
+    gap: 20px;
   }
   
-  .hfe-nav-menu {
+  .header-nav-list {
     gap: 10px;
   }
   
-  .hfe-nav-menu a {
+  .header-nav-link {
     font-size: 13px;
-    padding: 6px 8px;
+    padding: 6px 10px;
   }
   
-  #masthead .elementor-4572164c img {
+  .header-logo img {
     max-width: 160px;
   }
   
-  /* Show hamburger on tablet */
-  .mobile-menu-toggle {
+  .header-mobile-toggle {
     display: flex;
   }
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  /* Desktop layout row */
   #masthead .elementor-section-57274c4 {
     min-height: 60px;
     padding: 0 15px;
-    justify-content: space-between;
   }
   
-  /* Hide desktop navigation completely */
-  #masthead .elementor-section-57274c4 .elementor-col-33:nth-child(2),
-  #masthead .elementor-section-57274c4 .elementor-col-33:nth-child(3) {
-    display: none !important;
+  .header-desktop-nav {
+    display: none;
   }
   
-  /* Show hamburger on mobile */
-  .mobile-menu-toggle {
+  .header-mobile-toggle {
     display: flex;
     flex-shrink: 0;
-    margin-left: auto;
   }
   
-  #masthead .elementor-4572164c img {
+  .header-logo img {
     max-width: 140px;
   }
   
-  /* Mobile menu - position below header */
-  .mobile-nav-menu {
+  .header-mobile-menu {
     display: block;
-    position: fixed;
     top: 60px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1001;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  
-  .mobile-nav-menu.open {
-    max-height: 400px;
   }
 }
 

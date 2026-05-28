@@ -28,64 +28,35 @@ export default function Header() {
             <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6c36e717">
               <div className="elementor-widget-wrap elementor-element-populated">
                 <section className="elementor-section elementor-inner-section elementor-element elementor-element-57274c4 elementor-section-boxed">
-                  <div className="elementor-container elementor-column-gap-default">
-                    <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-56bf3c2f">
-                      <div className="elementor-widget-wrap elementor-element-populated">
-                        <div className="elementor-element elementor-element-4572164c elementor-widget__width-initial elementor-widget elementor-widget-image">
-                          <div className="elementor-widget-container">
-                            <Link href="/">
-                              <Image 
-                                src="/uploads/2024/09/LOGOoficial-300x257-1.png"
-                                alt="Manzana40 Logo"
-                                width={300}
-                                height={257}
-                                priority
-                              />
+                  <div className="header-desktop-nav">
+                    <div className="header-logo">
+                      <Link href="/">
+                        <Image 
+                          src="/uploads/2024/09/LOGOoficial-300x257-1.png"
+                          alt="Manzana40 Logo"
+                          width={300}
+                          height={257}
+                          priority
+                        />
+                      </Link>
+                    </div>
+                    <nav className="header-nav-menu">
+                      <ul className="header-nav-list">
+                        {navItems.map((item) => (
+                          <li key={item.href}>
+                            <Link href={item.href} className="header-nav-link">
+                              {item.label}
                             </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-403a4d88">
-                      <div className="elementor-widget-wrap elementor-element-populated">
-                        <div className="elementor-element elementor-element-6afc2782 elementor-widget__width-auto hfe-submenu-icon-arrow hfe-submenu-animation-none hfe-link-redirect-child hfe-nav-menu__breakpoint-tablet elementor-widget elementor-widget-navigation-menu">
-                          <div className="elementor-widget-container">
-                            <nav className="hfe-nav-menu hfe-layout-horizontal hfe-nav-menu-layout horizontal hfe-pointer__underline hfe-animation__slide">
-                              <ul id="menu-1" className="hfe-nav-menu">
-                                {navItems.map((item) => (
-                                  <li key={item.href} className="menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu">
-                                    <Link href={item.href} className="hfe-menu-item">
-                                      {item.label}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </nav>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6d004cfd elementor-hidden-tablet elementor-hidden-mobile">
-                      <div className="elementor-widget-wrap elementor-element-populated">
-                        <div className="elementor-element elementor-element-703b2ab4 elementor-align-center elementor-widget elementor-widget-button">
-                          <div className="elementor-widget-container">
-                            <div className="elementor-button-wrapper">
-                              <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                <span className="elementor-button-content-wrapper">
-                                  <span className="elementor-button-text">Agenda una Visita</span>
-                                </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
+                    <div className="header-cta">
+                      <a href="#" className="header-cta-button">Agenda una Visita</a>
                     </div>
                   </div>
-
                   <button 
-                    className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
+                    className={`header-mobile-toggle ${mobileMenuOpen ? 'active' : ''}`}
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     aria-label="Toggle menu"
                   >
@@ -95,14 +66,14 @@ export default function Header() {
                   </button>
                 </section>
 
-                <div className={`mobile-nav-menu ${mobileMenuOpen ? 'open' : ''}`}>
+                <div className={`header-mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
                   <nav>
-                    <ul className="mobile-nav-list">
+                    <ul className="header-mobile-nav-list">
                       {navItems.map((item) => (
                         <li key={item.href}>
                           <Link 
                             href={item.href} 
-                            className="mobile-nav-link"
+                            className="header-mobile-nav-link"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {item.label}
@@ -110,7 +81,7 @@ export default function Header() {
                         </li>
                       ))}
                       <li>
-                        <a href="#" className="mobile-cta-button">Agenda una Visita</a>
+                        <a href="#" className="header-mobile-cta">Agenda una Visita</a>
                       </li>
                     </ul>
                   </nav>
