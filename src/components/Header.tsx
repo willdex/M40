@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const navItems = [
   { href: '/nosotros', label: 'Nosotros' },
@@ -13,6 +14,8 @@ const navItems = [
 ]
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <header id="masthead" itemType="https://schema.org/WPHeader">
       <p className="main-title bhf-hidden" itemProp="headline">
@@ -80,7 +83,38 @@ export default function Header() {
                       </div>
                     </div>
                   </div>
+
+                  <button 
+                    className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    aria-label="Toggle menu"
+                  >
+                    <span className="hamburger-line"></span>
+                    <span className="hamburger-line"></span>
+                    <span className="hamburger-line"></span>
+                  </button>
                 </section>
+
+                <div className={`mobile-nav-menu ${mobileMenuOpen ? 'open' : ''}`}>
+                  <nav>
+                    <ul className="mobile-nav-list">
+                      {navItems.map((item) => (
+                        <li key={item.href}>
+                          <Link 
+                            href={item.href} 
+                            className="mobile-nav-link"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                      <li>
+                        <a href="#" className="mobile-cta-button">Agenda una Visita</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
             </div>
           </div>
