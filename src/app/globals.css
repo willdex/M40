@@ -8,6 +8,7 @@ html, body, html body {
   border: 0 !important;
   outline: 0 !important;
   background-color: transparent;
+  box-sizing: border-box;
 }
 
 /* Ensure layout containers stretch full width on all viewports */
@@ -15,6 +16,15 @@ html, body, html body {
 #mid {
   width: 100%;
   max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Global box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Preloader - Original */
