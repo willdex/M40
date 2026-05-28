@@ -1,0 +1,279 @@
+/* Manzana40 - Desktop-First CSS (Preserve Original Spacing) */
+/* This file preserves exact pixel values from original Elementor output */
+
+/* Elementor page-54 (Homepage) styles */
+.elementor-54 {
+  /* Hero slider section */
+}
+.elementor-54 .elementor-element.elementor-element-51986d34 > .elementor-container > .elementor-column > .elementor-widget-wrap {
+  align-content: center;
+  align-items: center;
+}
+.elementor-54 .elementor-element.elementor-element-51986d34 > .elementor-background-overlay {
+  background-color: #FFFFFF;
+  opacity: 0;
+}
+.elementor-54 .elementor-element.elementor-element-51986d34 {
+  min-height: 600px;
+}
+
+/* Dark section (#3f049f0a) - Main content section */
+.elementor-54 .elementor-element.elementor-element-3f049f0a:not(.elementor-motion-effects-element-type-background),
+.elementor-54 .elementor-element.elementor-element-3f049f0a > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-color: #1B191A;
+}
+.elementor-54 .elementor-element.elementor-element-3f049f0a > .elementor-container {
+  max-width: 1200px;
+}
+.elementor-54 .elementor-element.elementor-element-3f049f0a {
+  padding: 80px 0px 80px 0px;
+}
+
+/* Two-column layout */
+.elementor-54 .elementor-element.elementor-element-2afbff53.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Phone number styling */
+.elementor-54 .elementor-element.elementor-element-bed5b32 > .elementor-widget-container {
+  margin: 0px 100px 0px 100px;
+}
+.elementor-54 .elementor-element.elementor-element-bed5b32 .elementor-image-box-wrapper {
+  text-align: center;
+}
+.elementor-54 .elementor-element.elementor-element-bed5b32 .elementor-image-box-wrapper .elementor-image-box-img {
+  width: 27%;
+}
+.elementor-54 .elementor-element.elementor-element-bed5b32 .elementor-image-box-img img {
+  border-radius: 100%;
+}
+.elementor-54 .elementor-element.elementor-element-bed5b32 .elementor-image-box-title {
+  font-family: "Poppins", Sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #D3D3D3;
+}
+.elementor-54 .elementor-element.elementor-element-bed5b32 .elementor-image-box-description {
+  font-family: "Poppins", Sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  color: #A4BDC1;
+}
+
+/* Services section (#64d9d144) */
+.elementor-54 .elementor-element.elementor-element-64d9d144 > .elementor-container > .elementor-column > .elementor-widget-wrap {
+  align-content: center;
+  align-items: center;
+}
+.elementor-54 .elementor-element.elementor-element-64d9d144:not(.elementor-motion-effects-element-type-background),
+.elementor-54 .elementor-element.elementor-element-64d9d144 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-color: #1B191A;
+}
+.elementor-54 .elementor-element.elementor-element-64d9d144 {
+  padding: 70px 0px 70px 0px;
+}
+
+/* Services section title */
+.elementor-54 .elementor-element.elementor-element-de1818e > .elementor-widget-container {
+  padding: 0px 0px 28px 0px;
+}
+.elementor-54 .elementor-element.elementor-element-de1818e {
+  text-align: center;
+}
+.elementor-54 .elementor-element.elementor-element-de1818e .elementor-heading-title {
+  font-family: "Roboto", Sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #A4BDC1;
+}
+
+/* Services grid container */
+.elementor-54 .elementor-element.elementor-element-64d0d90d > .elementor-container {
+  min-height: 400px;
+}
+
+/* Service cards (elementor-cta) */
+.elementor-cta {
+  position: relative;
+  overflow: hidden;
+}
+.elementor-cta__bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.elementor-cta__bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+.elementor-cta:hover .elementor-cta__bg {
+  transform: scale(1.05);
+}
+.elementor-cta__bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+}
+.elementor-cta__content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+.elementor-cta__title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+.elementor-cta__description {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* Yellow banner section (#471822f6) */
+.elementor-54 .elementor-element.elementor-element-471822f6:not(.elementor-motion-effects-element-type-background),
+.elementor-54 .elementor-element.elementor-element-471822f6 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-color: #FFCD00;
+  background-image: url("/uploads/2024/09/backi.jpg");
+  background-position: top right;
+  background-size: cover;
+}
+.elementor-54 .elementor-element.elementor-element-471822f6 > .elementor-container {
+  min-height: 500px;
+}
+.elementor-54 .elementor-element.elementor-element-471822f6 {
+  padding: 50px 0px 50px 0px;
+}
+
+/* Investment section */
+.elementor-54 .elementor-element.elementor-element-1796b641:not(.elementor-motion-effects-element-type-background),
+.elementor-54 .elementor-element.elementor-element-1796b641 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-color: #1B191A;
+}
+.elementor-54 .elementor-element.elementor-element-1796b641 > .elementor-container {
+  max-width: 1200px;
+}
+.elementor-54 .elementor-element.elementor-element-1796b641 {
+  padding: 100px 0px 100px 0px;
+}
+
+/* Amenities grid styling */
+.elementor-54 .elementor-element.elementor-element-ecd4ddf {
+  padding: 60px 0px 0px 0px;
+}
+.elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-wrapper {
+  text-align: center;
+}
+.elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-img,
+.elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-img,
+.elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-img,
+.elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-img,
+.elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-img,
+.elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-img {
+  width: 30%;
+}
+.elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-title,
+.elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-title,
+.elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-title,
+.elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-title,
+.elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-title,
+.elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-title {
+  margin-bottom: 0px;
+  font-family: "Poppins", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #A4BDC1;
+}
+.elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-description,
+.elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-description,
+.elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-description,
+.elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-description,
+.elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-description,
+.elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-description {
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #D3D3D3;
+}
+
+/* Video play button */
+.elementor-custom-embed-play {
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* Elementor button styling */
+.elementor-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #4E82F1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.elementor-button:hover {
+  background: #4E6BD6;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Services Grid - Desktop 5 columns */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+.services-grid .elementor-cta {
+  min-height: 400px;
+}
+
+/* Amenities 3-column grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image box styling preserved */
+.elementor-image-box-wrapper {
+  text-align: center;
+}
+.elementor-image-box-img {
+  margin: 0 0 15px;
+}
+.elementor-image-box-img img {
+  max-width: 106px;
+  height: auto;
+  margin: 0 auto;
+}
+.elementor-image-box-title {
+  margin: 0 0 10px;
+}

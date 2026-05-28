@@ -1,0 +1,94 @@
+/* Manzana40 - Responsive CSS (Mobile/Tablet Fixes Only) */
+/* Desktop layout is PRESERVED - only mobile/tablet get adjusted */
+
+@media (max-width: 1024px) {
+  /* Tablet and below - reduce service cards from 5 to 3 columns */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-3f049f0a {
+    padding: 60px 0px 60px 0px;
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-64d9d144 {
+    padding: 50px 0px 50px 0px;
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-1796b641 {
+    padding: 80px 0px 80px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile adjustments - do NOT change desktop default */
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Two-column layout becomes stacked on mobile */
+  .elementor-54 .elementor-element.elementor-element-2afbff53,
+  .elementor-54 .elementor-element.elementor-element-4bfe6ee8 {
+    width: 100%;
+  }
+  
+  /* Amenities grid: 3 columns -> 1 column on mobile */
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Investment cards: 3 columns -> 1 column */
+  .elementor-row {
+    flex-direction: column;
+  }
+  
+  .elementor-row .elementor-column,
+  .elementor-row .elementor-col-33 {
+    width: 100% !important;
+  }
+  
+  /* Phone section margin fix */
+  .elementor-54 .elementor-element.elementor-element-bed5b32 > .elementor-widget-container {
+    margin: 0 20px 0 20px;
+  }
+  
+  /* Title font size reductions */
+  .elementor-54 .elementor-element.elementor-element-de1818e .elementor-heading-title {
+    font-size: 22px;
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-bed5b32 .elementor-image-box-description {
+    font-size: 28px;
+  }
+  
+  /* Navigation menu adjustments */
+  .hfe-nav-menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf {
+    padding: 40px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small phone - most minimal adjustments */
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-3f049f0a {
+    padding: 40px 0px 40px 0px;
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-de1818e .elementor-heading-title {
+    font-size: 18px;
+  }
+  
+  .elementor-54 .elementor-element.elementor-element-1796b641 {
+    padding: 60px 0px 60px 0px;
+  }
+}
