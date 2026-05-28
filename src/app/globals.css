@@ -1044,11 +1044,14 @@ body{cursor:auto}
 .page-hero {
   width: 100%;
   overflow: hidden;
+  max-height: 500px;
 }
 
 .page-hero__image {
   width: 100%;
   height: auto;
+  max-height: 500px;
+  object-fit: cover;
   display: block;
 }
 
@@ -1070,6 +1073,37 @@ body{cursor:auto}
   max-width: none;
   transform: translate(-50%, -50%);
   object-fit: cover;
+}
+
+/* Responsive hero scaling */
+@media (max-width: 1024px) {
+  .page-hero {
+    max-height: 400px;
+  }
+  
+  .page-hero__image {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    max-height: 300px;
+  }
+  
+  .page-hero__image {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    max-height: 220px;
+  }
+  
+  .page-hero__image {
+    max-height: 220px;
+  }
 }
 
 /* Homepage - Clean Header/Hero Flow - Legacy Support */
