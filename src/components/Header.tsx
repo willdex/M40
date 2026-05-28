@@ -42,7 +42,9 @@ export default function Header() {
           </ul>
         </nav>
 
-        <a href="#" className="m40-cta-button">Agenda una Visita</a>
+        <div className="m40-cta">
+          <a href="#" className="m40-cta-button">Agenda una Visita</a>
+        </div>
 
         <button 
           className={`m40-mobile-toggle ${mobileMenuOpen ? 'active' : ''}`}
