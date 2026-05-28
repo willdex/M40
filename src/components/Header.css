@@ -93,7 +93,7 @@
 .m40-cta-button {
   flex-shrink: 0;
   display: inline-block;
-  padding: 10px 25px;
+  padding: 12px 30px;
   background: #A4BDC1;
   color: #1B191A;
   text-decoration: none;
@@ -104,11 +104,35 @@
   text-transform: uppercase;
   white-space: nowrap;
   transition: background 0.3s, color 0.3s;
+  box-sizing: border-box;
 }
 
-.m40-cta-button:hover {
-  background: #8FADBF;
-  color: #1B191A;
+/* CTA Button - High specificity override */
+.m40-header .m40-cta-button,
+.m40-cta .m40-cta-button {
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  padding: 12px 30px !important;
+  background: #A4BDC1 !important;
+  color: #1B191A !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  transition: background 0.3s, color 0.3s !important;
+  box-sizing: border-box !important;
+  border: none !important;
+  box-shadow: none !important;
+  line-height: 1 !important;
+}
+
+.m40-header .m40-cta-button:hover,
+.m40-cta .m40-cta-button:hover {
+  background: #8FADBF !important;
+  color: #1B191A !important;
 }
 
 /* Mobile Toggle - Hamburger */
@@ -167,6 +191,7 @@
 }
 
 .m40-mobile-menu.open {
+  display: block;
   max-height: 400px;
 }
 
