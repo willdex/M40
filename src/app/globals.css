@@ -7,7 +7,14 @@ html, body, html body {
   padding: 0 !important;
   border: 0 !important;
   outline: 0 !important;
-  background-color: #fff;
+  background-color: transparent;
+}
+
+/* Ensure layout containers stretch full width on all viewports */
+.whole-layout,
+#mid {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Preloader - Original */
