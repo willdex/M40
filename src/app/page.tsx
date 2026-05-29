@@ -169,6 +169,25 @@ export default async function HomePage() {
 
 <ServicesSection title={homepage.featuresTitle} services={services} />
 
+          <section className="homepage-editorial">
+            <div className="homepage-editorial__container">
+              <div className="homepage-editorial__image-wrapper">
+                <img
+                  className="homepage-editorial__image"
+                  src="/uploads/2024/09/boca22.jpg"
+                  alt="Manzana40 Lifestyle"
+                  loading="lazy"
+                />
+              </div>
+              <div className="homepage-editorial__content">
+                <h2 className="homepage-editorial__title">UN ESPACIO QUE IMPULSA<br />LA FORMA EN QUE TRABAJAS</h2>
+                <p className="homepage-editorial__text">
+                  Más que oficinas, Manzana 40 propone un entorno diseñado para conectar productividad, bienestar y experiencias. Un lugar donde cada espacio impulsa nuevas ideas, relaciones y oportunidades.
+                </p>
+              </div>
+            </div>
+          </section>
+
           <section className="elementor-section elementor-top-section elementor-element elementor-element-65a4458b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="65a4458b" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-container elementor-column-gap-default">
               <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7be03aee" data-id="7be03aee" data-element_type="column" data-e-type="column">
@@ -422,6 +441,28 @@ export default async function HomePage() {
                       </div>
                     </div>
                   </section>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="homepage-community">
+            <div className="homepage-community__container">
+              <div className="homepage-community__header">
+                <h2 className="homepage-community__title">UNA COMUNIDAD QUE<br />GENERA OPORTUNIDADES</h2>
+                <p className="homepage-community__text">
+                  Empresas, profesionales y marcas conviven en un entorno pensado para generar conexiones reales, colaboración y crecimiento.
+                </p>
+              </div>
+              <div className="homepage-community__grid">
+                <div className="homepage-community__item">
+                  <img className="homepage-community__img" src="/uploads/2024/09/ofic33.jpg" alt="Manzana40 Business" loading="lazy" />
+                </div>
+                <div className="homepage-community__item">
+                  <img className="homepage-community__img" src="/uploads/2024/09/reuniion1-2048x1315.png" alt="Manzana40 Networking" loading="lazy" />
+                </div>
+                <div className="homepage-community__item">
+                  <img className="homepage-community__img" src="/uploads/2024/09/HUB401-2048x1153.png" alt="Manzana40 Community" loading="lazy" />
                 </div>
               </div>
             </div>

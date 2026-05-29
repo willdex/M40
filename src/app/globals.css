@@ -1163,3 +1163,187 @@ body{cursor:auto}
   overflow: hidden;
   max-width: 100vw;
 }
+
+/* Homepage Editorial Section 1 - Lifestyle */
+.homepage-editorial {
+  background: #1B191A;
+  padding: 100px 40px;
+  overflow: hidden;
+}
+
+.homepage-editorial__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.homepage-editorial__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-editorial__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+
+.homepage-editorial__content {
+  padding: 40px 0;
+}
+
+.homepage-editorial__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #A4BDC1;
+  line-height: 1.3;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.homepage-editorial__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Homepage Editorial Section 2 - Community Grid */
+.homepage-community {
+  background: #1B191A;
+  padding: 100px 40px;
+}
+
+.homepage-community__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.homepage-community__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.homepage-community__title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #A4BDC1;
+  line-height: 1.3;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.homepage-community__text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #D3D3CD;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage-community__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.homepage-community__item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.homepage-community__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.homepage-community__item:hover .homepage-community__img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .homepage-editorial {
+    padding: 80px 30px;
+  }
+
+  .homepage-editorial__container {
+    gap: 50px;
+  }
+
+  .homepage-editorial__title {
+    font-size: 1.5rem;
+  }
+
+  .homepage-community__grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-editorial {
+    padding: 60px 20px;
+  }
+
+  .homepage-editorial__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .homepage-editorial__image-wrapper {
+    order: -1;
+  }
+
+  .homepage-editorial__image {
+    aspect-ratio: 4/3;
+  }
+
+  .homepage-editorial__content {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .homepage-editorial__title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .homepage-editorial__text {
+    font-size: 1rem;
+  }
+
+  .homepage-community {
+    padding: 60px 20px;
+  }
+
+  .homepage-community__title {
+    font-size: 1.3rem;
+  }
+
+  .homepage-community__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .homepage-community__item {
+    aspect-ratio: 16/9;
+  }
+}
