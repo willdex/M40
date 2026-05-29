@@ -25,9 +25,14 @@
     padding: 40px 0;
   }
 
+  /* Ecosistema section - reduce gap below CTA on mobile */
+  .elementor-54 .elementor-element.elementor-element-65a4458b {
+    margin-top: 0;
+  }
+
   /* Ecosistema section spacing */
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {
-    padding: 30px 0 0 0;
+    padding: 20px 0 0 0;
   }
 
   /* Editorial sections on homepage - tighter mobile spacing */
