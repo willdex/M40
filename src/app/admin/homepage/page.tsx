@@ -470,12 +470,12 @@ function ServiceEditor({
   )
 }
 
-function AmenityEditor({ 
-  amenity, 
-  onChange, 
-  onSave, 
-  onDelete 
-}: { 
+function AmenityEditor({
+  amenity,
+  onChange,
+  onSave,
+  onDelete
+}: {
   amenity: Amenity
   onChange: (a: Amenity) => void
   onSave: () => void
@@ -508,6 +508,26 @@ function AmenityEditor({
             rows={2}
             className="amenity-editor__description"
           />
+          <div className="amenity-editor__meta">
+            <div className="amenity-editor__order">
+              <label>Orden</label>
+              <input
+                type="number"
+                value={amenity.order || 0}
+                onChange={(e) => onChange({ ...amenity, order: parseInt(e.target.value) || 0 })}
+                min="0"
+                className="amenity-editor__order-input"
+              />
+            </div>
+            <label className="amenity-editor__active">
+              <input
+                type="checkbox"
+                checked={amenity.active !== false}
+                onChange={(e) => onChange({ ...amenity, active: e.target.checked })}
+              />
+              Activo
+            </label>
+          </div>
           <div className="amenity-editor__actions">
             <button className="homepage-editor__btn homepage-editor__btn--save" onClick={onSave}>
               Guardar

@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import PageHero from '@/components/PageHero'
 import ContentWithImage from '@/components/ContentWithImage'
 
 export default function AmenidadesPage() {
@@ -8,13 +9,12 @@ export default function AmenidadesPage() {
       <Header />
 
       <main id="mid">
-        <section className="page-hero">
-          <img 
-            src="/uploads/2024/09/slideramenidades-1.jpg" 
-            alt="Amenidades" 
-            className="page-hero__image"
-          />
-        </section>
+        <PageHero
+          image="/uploads/2024/09/amenidades-hero.jpg"
+          title="Amenidades"
+          overlayEnabled={true}
+          overlayOpacity={0.4}
+        />
 
         <ContentWithImage
           title="Galería de Arte Koqui Handal"

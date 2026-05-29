@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import PageHero from '@/components/PageHero'
 import ContentWithImage from '@/components/ContentWithImage'
 
 const benefits = [
@@ -31,13 +32,12 @@ export default function Hub40Page() {
       <Header />
 
       <main id="mid">
-        <section className="page-hero">
-          <img 
-            src="/uploads/2024/09/SLIDER-1.jpg" 
-            alt="Hub 40" 
-            className="page-hero__image"
-          />
-        </section>
+        <PageHero
+          image="/uploads/2024/09/hub40-hero.jpg"
+          title="Hub 40"
+          overlayEnabled={true}
+          overlayOpacity={0.4}
+        />
 
         <section className="hub-why">
           <div className="hub-why__container">

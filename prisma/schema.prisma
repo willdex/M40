@@ -109,12 +109,27 @@ model Media {
   filename    String
   originalName String
   url         String
-  category    String   // homepage, heroes, services, icons, videos
+  category    String   // homepage, heroes, services, icons, videos, nosotros
   mimeType    String
   size        Int
   width       Int?
   height      Int?
   alt         String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model EfficiencyItem {
+  id          String   @id @default(cuid())
+  title       String
+  shortDesc   String   @default("")
+  detailDesc  String   @default("")
+  image       String   @default("")
+  icon        String   @default("")
+  ctaText     String   @default("Ver más")
+  ctaLink     String   @default("")
+  order       Int      @default(0)
+  active      Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }

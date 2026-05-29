@@ -18,7 +18,7 @@ interface MediaAsset {
 interface AdminMediaPickerProps {
   value?: string
   onChange: (url: string, media?: MediaAsset) => void
-  category: 'homepage' | 'heroes' | 'services' | 'icons' | 'videos'
+  category: 'homepage' | 'heroes' | 'services' | 'icons' | 'videos' | 'nosotros' | 'oficinas'
   accept?: string
   label?: string
   aspectRatio?: string

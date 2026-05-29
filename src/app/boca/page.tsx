@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import PageHero from '@/components/PageHero'
 import ContentWithImage from '@/components/ContentWithImage'
 
 const galleryImages = [
@@ -25,13 +26,12 @@ export default function BocaPage() {
       <Header />
 
       <main id="mid">
-        <section className="page-hero">
-          <img 
-            src="/uploads/2024/09/bocaslider.jpg" 
-            alt="Boca Mixtura" 
-            className="page-hero__image"
-          />
-        </section>
+        <PageHero
+          image="/uploads/2024/09/boca-hero.jpg"
+          title="Boca Mixtura"
+          overlayEnabled={true}
+          overlayOpacity={0.4}
+        />
 
         <ContentWithImage
           title="Boulevard Gastronómico"

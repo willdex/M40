@@ -71,6 +71,45 @@
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {
     padding: 40px 0px 0px 0px;
   }
+
+  /* Amenity premium card responsive */
+  .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-wrapper,
+  .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-wrapper,
+  .elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-wrapper,
+  .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-wrapper,
+  .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-wrapper,
+  .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-wrapper {
+    padding: 24px 16px;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-img,
+  .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-img,
+  .elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-img,
+  .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-img,
+  .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-img,
+  .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-title,
+  .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-title,
+  .elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-title,
+  .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-title,
+  .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-title,
+  .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-title {
+    font-size: 0.85rem;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-description,
+  .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-description,
+  .elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-description,
+  .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-description,
+  .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-description,
+  .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-description {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
