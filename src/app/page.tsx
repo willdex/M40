@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ServicesSection from '@/components/ServicesSection'
 import HomepageEditorials from '@/components/HomepageEditorials'
+import HomePhoneCTA from '@/components/HomePhoneCTA'
 import type { SiteContent } from '@/lib/content'
 
 const STATIC_FALLBACK: SiteContent = {
@@ -150,23 +151,12 @@ export default async function HomePage() {
                       </div>
                     </div>
                   </div>
-                  <div className="elementor-element elementor-element-bed5b32 elementor-position-left taxi-choice-section-phone elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="bed5b32" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
-                    <div className="elementor-widget-container">
-                      <div className="elementor-image-box-wrapper">
-                        <figure className="elementor-image-box-img">
-                          <img loading="lazy" decoding="async" width="33" height="33" src="/uploads/2024/09/choice-phn-icon.png" alt="" />
-                        </figure>
-                        <div className="elementor-image-box-content">
-                          <h3 className="elementor-image-box-title">Agenda tu Visita</h3>
-                          <p className="elementor-image-box-description">{homepage.contactPhone}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </section>
+
+<HomePhoneCTA phone={homepage.contactPhone} />
 
 <ServicesSection title={homepage.featuresTitle} services={services} />
 
