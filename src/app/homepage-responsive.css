@@ -6,17 +6,55 @@
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .elementor-54 .elementor-element.elementor-element-3f049f0a {
     padding: 60px 0px 60px 0px;
   }
-  
+
   .elementor-54 .elementor-element.elementor-element-64d9d144 {
     padding: 50px 0px 50px 0px;
   }
-  
+
   .elementor-54 .elementor-element.elementor-element-1796b641 {
     padding: 80px 0px 80px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Homepage Hero - ensure video displays correctly */
+  .homepage-hero {
+    min-height: 400px;
+    max-height: 500px;
+  }
+
+  .homepage-hero .hero-video,
+  .homepage-hero .hero-image {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  /* Homepage hero content section */
+  .elementor-54 .elementor-element.elementor-element-3f049f0a {
+    padding: 40px 0;
+  }
+
+  /* Phone/contact section */
+  .elementor-54 .elementor-element.elementor-element-bed5b32 > .elementor-widget-container {
+    margin: 0 16px;
+  }
+
+  /* Ecosistema section spacing */
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf {
+    padding: 30px 0 0 0;
+  }
+
+  /* Editorial sections on homepage - tighter mobile spacing */
+  .homepage-editorial {
+    padding: 40px 16px;
+  }
+
+  .homepage-community {
+    padding: 40px 16px;
   }
 }
 
