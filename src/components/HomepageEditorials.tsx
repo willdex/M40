@@ -33,7 +33,7 @@ const FALLBACK_COMMUNITY: EditorialSection = {
   subtitle: '',
   paragraph: 'Empresas, profesionales y marcas conviven en un entorno pensado para generar conexiones reales, colaboración y crecimiento.',
   image: '',
-  images: JSON.stringify(['/uploads/2024/09/ofic33.jpg', '/uploads/2024/09/reuniion1-2048x1315.png', '/uploads/2024/09/HUB401-2048x1153.png']),
+  images: JSON.stringify(['/uploads/2024/09/ofic33.jpg', '/uploads/2024/09/reuniion1-2048x1315.jpg', '/uploads/2024/09/HUB401-2048x1153.png']),
   active: true,
   order: 1
 }
