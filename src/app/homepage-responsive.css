@@ -1,4 +1,4 @@
-/* Manzana40 - Responsive CSS (Mobile/Tablet Fixes Only) */
+/* Manzana40 - Homepage Responsive CSS (Mobile/Tablet Fixes Only) */
 /* Desktop layout is PRESERVED - only mobile/tablet get adjusted */
 
 @media (max-width: 1024px) {
@@ -8,10 +8,10 @@
 }
 
 @media (max-width: 768px) {
-  /* Homepage Hero - ensure video displays correctly */
+  /* ===== HOMEPAGE HERO ===== */
   .homepage-hero {
-    min-height: 400px;
-    max-height: 500px;
+    min-height: 350px;
+    max-height: 450px;
   }
 
   .homepage-hero .hero-video,
@@ -20,75 +20,138 @@
     object-position: center center;
   }
 
-  /* Homepage hero content section */
+  /* ===== HERO CONTENT SECTION (3f049f0a) ===== */
   .elementor-54 .elementor-element.elementor-element-3f049f0a {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
-  /* Ecosistema section - reduce gap below CTA on mobile */
-  .elementor-54 .elementor-element.elementor-element-65a4458b {
-    margin-top: 0;
-  }
-
-  /* Ecosistema section spacing */
-  .elementor-54 .elementor-element.elementor-element-ecd4ddf {
-    padding: 20px 0 0 0;
-  }
-
-  /* Editorial sections on homepage - tighter mobile spacing */
-  .homepage-editorial {
-    padding: 40px 16px;
-  }
-
-  .homepage-community {
-    padding: 40px 16px;
-  }
-
-  /* Services grid */
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Two-column layout becomes stacked on mobile */
   .elementor-54 .elementor-element.elementor-element-2afbff53,
   .elementor-54 .elementor-element.elementor-element-4bfe6ee8 {
     width: 100%;
   }
 
-  /* Amenities grid: 3 columns -> 1 column on mobile */
-  .amenities-grid {
-    grid-template-columns: 1fr;
+  /* ===== HOME PHONE CTA ===== */
+  .home-phone-cta {
+    padding: 20px 0;
+    margin: 0;
   }
 
-  /* Investment cards: 3 columns -> 1 column */
-  .elementor-row {
-    flex-direction: column;
+  .home-phone-cta__phone {
+    font-size: 1.6rem;
   }
 
-  .elementor-row .elementor-column,
-  .elementor-row .elementor-col-33 {
-    width: 100% !important;
+  /* ===== SERVICES SECTION ===== */
+  .services-section {
+    padding: 30px 0;
   }
 
-  /* Title font size reductions */
-  .elementor-54 .elementor-element.elementor-element-de1818e .elementor-heading-title {
-    font-size: 22px;
+  .services-header {
+    padding: 15px 15px 20px;
   }
 
-  /* Navigation menu adjustments */
-  .hfe-nav-menu {
-    flex-wrap: wrap;
+  .services-title {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 250px;
+  }
+
+  .service-card {
+    min-height: 250px;
+  }
+
+  .service-card-content {
+    min-height: 180px;
+    padding: 20px 15px;
+  }
+
+  .service-card-title {
+    font-size: 0.85rem;
+  }
+
+  .service-card-description {
+    font-size: 0.75rem;
+  }
+
+  /* ===== EDITORIAL SECTIONS ===== */
+  .homepage-editorial {
+    padding: 30px 16px;
+  }
+
+  .homepage-editorial__container {
+    gap: 20px;
+  }
+
+  .homepage-editorial__content {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .homepage-editorial__title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .homepage-editorial__text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .homepage-community {
+    padding: 30px 16px;
+  }
+
+  .homepage-community__header {
+    margin-bottom: 25px;
+  }
+
+  .homepage-community__title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .homepage-community__text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .homepage-community__grid {
     gap: 15px;
   }
 
-  /* Amenity premium card responsive */
+  /* ===== AMENITIES SECTION (65a4458b) ===== */
+  .elementor-54 .elementor-element.elementor-element-65a4458b {
+    margin-top: 0;
+    padding: 30px 0;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-4628239b .elementor-heading-title {
+    font-size: 1.1rem;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-5ce39c63 .elementor-heading-title {
+    font-size: 0.9rem;
+  }
+
+  /* Inner sections within amenities */
+  .elementor-54 .elementor-element.elementor-element-338adee1 {
+    padding: 0;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf {
+    padding: 20px 0 0 0;
+  }
+
+  /* Amenity cards */
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-wrapper {
-    padding: 24px 16px;
+    padding: 20px 12px;
   }
 
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-img,
@@ -97,9 +160,9 @@
   .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-img,
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-img,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-img {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 16px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
   }
 
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-title,
@@ -108,7 +171,7 @@
   .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-title,
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-title,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-title {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-description,
@@ -117,24 +180,164 @@
   .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-description,
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-description,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-description {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  /* ===== AMENITIES GRID ===== */
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* ===== YELLOW BANNER (471822f6) ===== */
+  .elementor-54 .elementor-element.elementor-element-471822f6 {
+    padding: 30px 0;
+    min-height: auto;
+  }
+
+  /* ===== INVESTMENT SECTION (1796b641) ===== */
+  .elementor-54 .elementor-element.elementor-element-1796b641 {
+    padding: 40px 0;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-5a0df5a2 .elementor-heading-title {
+    font-size: 1rem;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-ae6ab8 .elementor-heading-title {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* ===== INVESTMENT INNER SECTION ===== */
+  .elementor-54 .elementor-element.elementor-element-41653b0e {
+    padding: 0;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-41653b0e .elementor-column {
+    width: 100%;
+  }
+
+  /* ===== FOOTER SECTION ===== */
+  .elementor-54 .elementor-element.elementor-element-c1f5d57 {
+    padding: 30px 0;
+  }
+
+  /* ===== NAVIGATION ===== */
+  .hfe-nav-menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* ===== INVESTMENT CARDS ===== */
+  .elementor-row {
+    flex-direction: column;
+  }
+
+  .elementor-row .elementor-column,
+  .elementor-row .elementor-col-33 {
+    width: 100% !important;
   }
 }
 
 @media (max-width: 480px) {
-  .services-grid {
-    grid-template-columns: 1fr;
+  /* ===== HERO ===== */
+  .homepage-hero {
+    min-height: 300px;
+    max-height: 400px;
   }
 
   .elementor-54 .elementor-element.elementor-element-3f049f0a {
-    padding: 40px 0px 40px 0px;
+    padding: 20px 0;
   }
 
-  .elementor-54 .elementor-element.elementor-element-de1818e .elementor-heading-title {
-    font-size: 18px;
+  /* ===== SERVICES ===== */
+  .services-section {
+    padding: 20px 0;
   }
 
+  .services-header {
+    padding: 10px 15px 15px;
+  }
+
+  .services-title {
+    font-size: 0.9rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    min-height: 200px;
+  }
+
+  .service-card {
+    min-height: 200px;
+  }
+
+  .service-card-content {
+    min-height: 150px;
+    padding: 15px;
+  }
+
+  .service-card-title {
+    font-size: 0.8rem;
+  }
+
+  .service-card-description {
+    font-size: 0.7rem;
+  }
+
+  /* ===== EDITORIAL ===== */
+  .homepage-editorial {
+    padding: 20px 16px;
+  }
+
+  .homepage-community {
+    padding: 20px 16px;
+  }
+
+  .homepage-community__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ===== AMENITIES ===== */
+  .elementor-54 .elementor-element.elementor-element-65a4458b {
+    padding: 20px 0;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf {
+    padding: 15px 0 0 0;
+  }
+
+  /* ===== INVESTMENT ===== */
   .elementor-54 .elementor-element.elementor-element-1796b641 {
-    padding: 60px 0px 60px 0px;
+    padding: 30px 0;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-5a0df5a2 .elementor-heading-title {
+    font-size: 0.9rem;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-ae6ab8 .elementor-heading-title {
+    font-size: 0.8rem;
+  }
+
+  /* ===== HOME PHONE CTA ===== */
+  .home-phone-cta {
+    padding: 15px 0;
+  }
+
+  .home-phone-cta__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .home-phone-cta__title {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .home-phone-cta__phone {
+    font-size: 1.3rem;
   }
 }
