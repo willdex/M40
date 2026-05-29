@@ -680,7 +680,7 @@ footer {
 /* Hub 40 Page */
 .hub-why {
   padding: 80px 0;
-  background: #fff;
+  background: #1B191A;
 }
 
 .hub-why__container {
@@ -695,18 +695,20 @@ footer {
 .hub-why__image img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 .hub-why__title {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0 0 10px;
-  color: #333;
+  color: #A4BDC1;
+  text-transform: uppercase;
 }
 
 .hub-why__subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: #D3D3CD;
   margin: 0 0 30px;
 }
 
@@ -723,7 +725,7 @@ footer {
 }
 
 .hub-why__icon {
-  color: #4E82F1;
+  color: #A4BDC1;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -732,19 +734,19 @@ footer {
   font-size: 1rem;
   font-weight: 700;
   margin: 0 0 5px;
-  color: #333;
+  color: #A4BDC1;
 }
 
 .hub-why__item p {
   font-size: 0.9rem;
-  color: #666;
+  color: #D3D3CD;
   margin: 0;
   line-height: 1.5;
 }
 
 .hub-benefits {
   padding: 80px 0;
-  background: #f5f5f5;
+  background: #252525;
 }
 
 .hub-benefits__container {
@@ -757,14 +759,15 @@ footer {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0 0 10px;
-  color: #333;
+  color: #A4BDC1;
+  text-transform: uppercase;
 }
 
 .hub-benefits__subtitle {
   font-size: 1.2rem;
   font-weight: 400;
   margin: 0 0 50px;
-  color: #666;
+  color: #D3D3CD;
 }
 
 .hub-benefits__grid {
@@ -774,10 +777,18 @@ footer {
 }
 
 .hub-benefit {
-  background: #fff;
+  background: #1B191A;
   padding: 30px;
   border-radius: 8px;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hub-benefit:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .hub-benefit img {
@@ -791,7 +802,8 @@ footer {
   font-size: 0.95rem;
   font-weight: 600;
   margin: 0;
-  color: #333;
+  color: #A4BDC1;
+  text-transform: uppercase;
 }
 
 .hub-cta {
@@ -816,17 +828,18 @@ footer {
 .hub-cta__button {
   display: inline-block;
   padding: 15px 40px;
-  background: #4E82F1;
-  color: #fff;
+  background: #A4BDC1;
+  color: #1B191A;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 0;
   font-weight: 600;
   font-size: 1rem;
   transition: background 0.3s;
+  text-transform: uppercase;
 }
 
 .hub-cta__button:hover {
-  background: #4E6BD6;
+  background: #8FADBF;
 }
 
 @media (max-width: 768px) {
