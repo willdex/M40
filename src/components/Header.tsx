@@ -43,7 +43,7 @@ export default function Header() {
         </nav>
 
         <div className="m40-cta">
-          <a href="#" className="m40-cta-button">Agenda una Visita</a>
+          <Link href="/agenda-tu-visita" className="m40-cta-button">Agenda una Visita</Link>
         </div>
 
         <button 
@@ -72,7 +72,7 @@ export default function Header() {
               </li>
             ))}
             <li>
-              <a href="#" className="m40-mobile-cta">Agenda una Visita</a>
+              <Link href="/agenda-tu-visita" className="m40-mobile-cta" onClick={() => setMobileMenuOpen(false)}>Agenda una Visita</Link>
             </li>
           </ul>
         </nav>
