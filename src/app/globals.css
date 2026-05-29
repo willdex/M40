@@ -666,6 +666,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 30px;
     padding: 40px 20px;
+    text-align: center;
   }
 
   .content-with-image--reverse {
@@ -674,6 +675,19 @@ footer {
 
   .content-with-image__title {
     font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .content-with-image__subtitle {
+    text-align: center;
+  }
+
+  .content-with-image__text {
+    text-align: center;
+  }
+
+  .content-with-image__features {
+    align-items: center;
   }
 }
 
@@ -847,6 +861,19 @@ footer {
     grid-template-columns: 1fr;
     gap: 30px;
     padding: 0 20px;
+    text-align: center;
+  }
+
+  .hub-why__title {
+    text-align: center;
+  }
+
+  .hub-why__subtitle {
+    text-align: center;
+  }
+
+  .hub-why__item {
+    text-align: left;
   }
 
   .hub-benefits__grid {
@@ -854,8 +881,17 @@ footer {
     gap: 20px;
   }
 
+  .hub-cta {
+    text-align: center;
+  }
+
   .hub-cta h2 {
     font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .hub-cta__button {
+    margin: 0 auto;
   }
 }
 
@@ -919,8 +955,17 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .boca-gallery__title,
+  .boca-gallery__subtitle {
+    text-align: center;
+  }
+
   .boca-restaurants__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boca-restaurants__item {
+    text-align: center;
   }
 }
 
@@ -1300,12 +1345,12 @@ body{cursor:auto}
 
 @media (max-width: 768px) {
   .homepage-editorial {
-    padding: 60px 20px;
+    padding: 50px 16px;
   }
 
   .homepage-editorial__container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 
   .homepage-editorial__image-wrapper {
@@ -1317,25 +1362,36 @@ body{cursor:auto}
   }
 
   .homepage-editorial__content {
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
   }
 
   .homepage-editorial__title {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
   }
 
   .homepage-editorial__text {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .homepage-community {
-    padding: 60px 20px;
+    padding: 50px 16px;
+  }
+
+  .homepage-community__header {
+    margin-bottom: 40px;
   }
 
   .homepage-community__title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .homepage-community__text {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .homepage-community__grid {
