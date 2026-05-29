@@ -862,7 +862,7 @@ footer {
 /* Boca Page */
 .boca-gallery {
   padding: 60px 0;
-  background: #fff;
+  background: #1B191A;
 }
 
 .boca-gallery__grid {
@@ -879,11 +879,16 @@ footer {
   height: auto;
   display: block;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.boca-gallery__item:hover img {
+  transform: scale(1.02);
 }
 
 .boca-restaurants {
   padding: 60px 0;
-  background: #f5f5f5;
+  background: #252525;
 }
 
 .boca-restaurants__grid {
@@ -900,6 +905,13 @@ footer {
   height: auto;
   display: block;
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.boca-restaurant:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 @media (max-width: 768px) {
