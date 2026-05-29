@@ -135,23 +135,38 @@
     font-size: 0.9rem;
   }
 
-  /* Inner sections within amenities */
-  .elementor-54 .elementor-element.elementor-element-338adee1 {
-    padding: 0;
-  }
-
+  /* Amenity rows - ensure consistent spacing on mobile */
+  .elementor-54 .elementor-element.elementor-element-338adee1,
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {
-    padding: 20px 0 0 0;
+    padding: 0;
+    margin: 0;
   }
 
-  /* Amenity cards */
+  /* Make columns stack on mobile with equal gaps */
+  .elementor-54 .elementor-element.elementor-element-338adee1 > .elementor-container,
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf > .elementor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-338adee1 .elementor-column,
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf .elementor-column {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* Amenity cards - uniform spacing */
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-wrapper {
-    padding: 20px 12px;
+    padding: 20px 15px;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-img,
@@ -163,6 +178,8 @@
     width: 50px;
     height: 50px;
     margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-title,
@@ -172,6 +189,7 @@
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-title,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-title {
     font-size: 0.8rem;
+    margin-bottom: 8px;
   }
 
   .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-description,
@@ -181,12 +199,13 @@
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-description,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-description {
     font-size: 0.75rem;
+    margin: 0;
   }
 
   /* ===== AMENITIES GRID ===== */
   .amenities-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px;
   }
 
   /* ===== YELLOW BANNER (471822f6) ===== */
