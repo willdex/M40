@@ -470,11 +470,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .services-section {
+    padding: 40px 0;
+  }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     min-height: 300px;
   }
-  
+
   .service-card {
     min-height: 300px;
   }
@@ -482,9 +486,9 @@ footer {
   .service-card-content {
     min-height: 200px;
   }
-  
+
   .services-header {
-    padding: 40px 15px 30px;
+    padding: 20px 15px 20px;
   }
 }
 
