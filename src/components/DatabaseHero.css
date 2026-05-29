@@ -1,0 +1,121 @@
+/* Database Hero Component */
+.database-hero {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  background: #1B191A;
+}
+
+.database-hero--loading .database-hero__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #1B191A 0%, #252525 50%, #1B191A 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.database-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.database-hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.database-hero__image {
+  position: absolute;
+  inset: 0;
+}
+
+.database-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 2;
+}
+
+.database-hero__content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.database-hero__content-inner {
+  max-width: 800px;
+  text-align: center;
+}
+
+.database-hero__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.database-hero__subtitle {
+  font-size: 1.1rem;
+  color: #D3D3CD;
+  margin: 0;
+  line-height: 1.6;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .database-hero {
+    height: 450px;
+  }
+  
+  .database-hero__title {
+    font-size: 2.2rem;
+  }
+  
+  .database-hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .database-hero {
+    height: 350px;
+  }
+  
+  .database-hero__title {
+    font-size: 1.8rem;
+  }
+  
+  .database-hero__subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .database-hero {
+    height: 280px;
+  }
+  
+  .database-hero__title {
+    font-size: 1.5rem;
+  }
+}

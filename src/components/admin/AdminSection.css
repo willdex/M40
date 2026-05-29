@@ -1,0 +1,68 @@
+/* Admin Section Component */
+.admin-section {
+  background: #252525;
+  border-radius: 8px;
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+.admin-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.admin-section__header-content {
+  flex: 1;
+}
+
+.admin-section__title {
+  color: #A4BDC1;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.admin-section__description {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 4px 0 0 0;
+}
+
+.admin-section__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-section__toggle {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1B191A;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #A4BDC1;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.admin-section__content {
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .admin-section__header {
+    padding: 16px;
+  }
+  
+  .admin-section__content {
+    padding: 0 16px 16px 16px;
+  }
+}
