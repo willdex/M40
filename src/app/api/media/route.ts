@@ -16,7 +16,7 @@ const MAX_SIZE = {
   icon: 2 * 1024 * 1024
 }
 
-const CATEGORIES = ['homepage', 'heroes', 'services', 'icons', 'videos', 'nosotros', 'efficiency'] as const
+const CATEGORIES = ['homepage', 'heroes', 'services', 'icons', 'videos', 'nosotros', 'efficiency', 'editorial', 'oficinas'] as const
 
 export async function POST(request: Request) {
   try {
