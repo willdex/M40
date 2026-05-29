@@ -1406,7 +1406,7 @@ body{cursor:auto}
 
 /* Homepage Phone CTA */
 .home-phone-cta {
-  padding: 60px 0;
+  padding: 32px 0;
   background: #1B191A;
 }
 
@@ -1457,7 +1457,7 @@ body{cursor:auto}
 
 @media (max-width: 768px) {
   .home-phone-cta {
-    padding: 40px 0;
+    padding: 24px 0;
   }
 
   .home-phone-cta__container {
