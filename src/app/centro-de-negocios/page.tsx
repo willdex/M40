@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import PageHero from '@/components/PageHero'
 import ContentWithImage from '@/components/ContentWithImage'
 
 const rooms = [
@@ -52,13 +53,12 @@ export default function CentroDeNegociosPage() {
       <Header />
 
       <main id="mid">
-        <section className="page-hero">
-          <img 
-            src="/uploads/2024/09/slider3.png" 
-            alt="Centro de Negocios" 
-            className="page-hero__image"
-          />
-        </section>
+        <PageHero
+          image="/uploads/2024/09/negocio-hero.png"
+          title="Centro de Negocios"
+          overlayEnabled={true}
+          overlayOpacity={0.4}
+        />
 
         <ContentWithImage
           title="Salas de Reuniones"

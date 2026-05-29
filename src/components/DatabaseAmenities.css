@@ -1,0 +1,96 @@
+/* Database Amenities Component */
+.database-amenities {
+  padding: 60px 20px;
+  background: #1B191A;
+  text-align: center;
+}
+
+.database-amenities__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #A4BDC1;
+  margin: 0 0 40px 0;
+}
+
+.database-amenities__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.amenity-card {
+  background: #252525;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.amenity-card__icon {
+  margin: 0 0 20px;
+}
+
+.amenity-card__icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.amenity-card__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #A4BDC1;
+  text-transform: uppercase;
+}
+
+.amenity-card__description {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .database-amenities {
+    padding: 40px 16px;
+  }
+
+  .database-amenities__title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .database-amenities__grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .amenity-card {
+    padding: 24px 16px;
+  }
+
+  .amenity-card__icon img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .amenity-card__title {
+    font-size: 0.85rem;
+  }
+
+  .amenity-card__description {
+    font-size: 0.8rem;
+  }
+}

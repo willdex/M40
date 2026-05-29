@@ -1,0 +1,149 @@
+// Manzana40 CMS Database Schema
+
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Hero {
+  id       String @id @default(cuid())
+  page     String @default("homepage") // homepage, nosotros, etc.
+  title    String
+  subtitle String?
+  videoSrc String?
+  posterSrc String?
+  alt      String?
+  order    Int     @default(0)
+  active   Boolean @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id          String @id @default(cuid())
+  title       String
+  description String
+  image       String
+  href        String
+  order       Int    @default(0)
+  active      Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Amenity {
+  id          String @id @default(cuid())
+  title       String
+  description String
+  icon        String
+  order       Int    @default(0)
+  active      Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model ContentBlock {
+  id          String  @id @default(cuid())
+  page        String  // nosotros, oficinas, etc.
+  sectionId   String?
+  title       String
+  content     String  // Can be multiline text or JSON
+  image       String?
+  imageAlt    String?
+  reverse     Boolean @default(false)
+  order       Int     @default(0)
+  active      Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Feature {
+  id          String @id @default(cuid())
+  sectionTitle String?
+  icon        String
+  title       String
+  description String
+  order       Int    @default(0)
+  active      Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SiteMeta {
+  id        String @id @default(cuid())
+  key       String @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model FooterContent {
+  id            String   @id @default(cuid())
+  aboutTitle    String
+  aboutText     String
+  servicesTitle String
+  contactTitle  String
+  address       String
+  phone         String
+  email         String
+  facebook      String?
+  instagram     String?
+  updatedAt     DateTime @updatedAt
+}
+
+model Media {
+  id          String   @id @default(cuid())
+  filename    String
+  originalName String
+  url         String
+  category    String   // homepage, heroes, services, icons, videos, nosotros
+  mimeType    String
+  size        Int
+  width       Int?
+  height      Int?
+  alt         String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model EfficiencyItem {
+  id          String   @id @default(cuid())
+  title       String
+  shortDesc   String   @default("")
+  detailDesc  String   @default("")
+  image       String   @default("")
+  icon        String   @default("")
+  ctaText     String   @default("Ver más")
+  ctaLink     String   @default("")
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model HomepageEditorial {
+  id        String   @id @default(cuid())
+  type      String   @default("lifestyle") // lifestyle, community
+  title     String
+  subtitle  String   @default("")
+  paragraph String   @default("")
+  image     String   @default("")
+  images    String   @default("[]") // JSON array of image URLs for community type
+  active    Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

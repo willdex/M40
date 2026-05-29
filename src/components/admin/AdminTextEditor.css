@@ -1,0 +1,79 @@
+/* Admin Text Editor Component */
+.admin-text-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-text-editor__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-text-editor__label {
+  color: #A4BDC1;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-text-editor__count {
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.admin-text-editor__input,
+.admin-text-editor__textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: #1B191A;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #D3D3CD;
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.admin-text-editor__input:focus,
+.admin-text-editor__textarea:focus {
+  outline: none;
+  border-color: #A4BDC1;
+  box-shadow: 0 0 0 3px rgba(164, 189, 193, 0.15);
+}
+
+.admin-text-editor__input::placeholder,
+.admin-text-editor__textarea::placeholder {
+  color: #555;
+}
+
+.admin-text-editor__input--heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.admin-text-editor__textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.admin-text-editor__helper {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .admin-text-editor__input,
+  .admin-text-editor__textarea {
+    padding: 10px 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .admin-text-editor__input--heading {
+    font-size: 1.1rem;
+  }
+}

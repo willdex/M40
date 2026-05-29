@@ -1,0 +1,111 @@
+/* Media Display Component - Responsive Safe */
+.media-display {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #1B191A;
+}
+
+.media-display--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  color: #555;
+  font-size: 0.85rem;
+  border: 1px dashed #333;
+  border-radius: 4px;
+}
+
+.media-display--fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.media-display--video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.media-display--icon {
+  width: 64px;
+  height: 64px;
+}
+
+.media-display--icon .media-display__image {
+  object-fit: contain;
+}
+
+.media-display__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive container utilities */
+.media-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.media-container--aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.media-container--aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.media-container--aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.media-container--aspect-3-2 {
+  aspect-ratio: 3 / 2;
+}
+
+/* Object-fit utilities for responsive handling */
+.object-cover {
+  object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
+/* Mobile-safe image rendering */
+@media (max-width: 768px) {
+  .media-display {
+    /* Ensures images don't overflow on mobile */
+    max-width: 100%;
+  }
+  
+  .media-display--video {
+    /* Videos maintain aspect ratio on mobile */
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+  
+  .media-display--icon {
+    /* Icons scale appropriately on mobile */
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .media-display--icon {
+    width: 56px;
+    height: 56px;
+  }
+}

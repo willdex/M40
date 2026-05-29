@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   
+  experimental: {
+    serverComponentsExternalPackages: ['bcryptjs', '@prisma/adapter-libsql'],
+  },
+  
   images: {
     unoptimized: true,
     remotePatterns: [

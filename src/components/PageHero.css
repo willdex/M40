@@ -1,0 +1,72 @@
+/* Page Hero Component */
+.page-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 550px;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-hero__image {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+/* Loading state */
+.page-hero--loading .page-hero__placeholder {
+  width: 100%;
+  height: 550px;
+  background: linear-gradient(90deg, #1B191A 0%, #252525 50%, #1B191A 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .page-hero {
+    max-height: 450px;
+  }
+
+  .page-hero--loading .page-hero__placeholder {
+    height: 450px;
+  }
+
+  .page-hero__image {
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    max-height: 350px;
+  }
+
+  .page-hero--loading .page-hero__placeholder {
+    height: 350px;
+  }
+
+  .page-hero__image {
+    max-height: 350px;
+  }
+
+  .page-hero__overlay {
+    opacity: 0.5 !important;
+  }
+}

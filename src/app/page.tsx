@@ -1,45 +1,77 @@
-import fs from 'fs'
-import path from 'path'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ServicesSection from '@/components/ServicesSection'
+import HomepageEditorials from '@/components/HomepageEditorials'
+import HomePhoneCTA from '@/components/HomePhoneCTA'
 import type { SiteContent } from '@/lib/content'
 
+const STATIC_FALLBACK: SiteContent = {
+  sliders: [{ id: 'slider-1', type: 'image', src: '', poster: '/uploads/2024/09/slidernosotros.jpg', alt: 'Manzana40 Hero' }],
+  homepage: {
+    heroTitle: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
+    heroSubtitle: 'Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio.',
+    mainVideo: { src: '/uploads/2024/09/Hyperlapse-Manzana-40.mp4', poster: '/uploads/revslider/video-media/slider_1_layer.jpg' },
+    contactPhone: '+591 71369822',
+    featuresTitle: 'UN ECOSISTEMA DE POSIBILIDADES, UN MUNDO DE OPORTUNIDADES PARA TU NEGOCIO',
+    amenitiesTitle: 'UNA PLAZA EMPRESARIAL ÚNICA'
+  },
+  services: [
+    { id: 'oficinas', title: 'OFICINAS', description: 'En venta y alquiler', image: '/uploads/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg', href: '/oficinas' },
+    { id: 'centro-de-negocios', title: 'CENTRO DE NEGOCIOS', description: 'Eventos Corporativos', image: '/uploads/2024/09/oficina2.jpg', href: '/centro-de-negocios' },
+    { id: 'hub-40', title: 'HUB 40', description: 'Co-Work', image: '/uploads/2024/09/oficina3.jpg', href: '/hub-40' },
+    { id: 'boca', title: 'BOCA MIXTURA', description: 'Boulevard Gastronómico', image: '/uploads/2024/09/oficina4.jpg', href: '/boca' },
+    { id: 'amenidades', title: 'AMENIDADES', description: 'Pensadas en vos', image: '/uploads/2024/09/boutique.jpg', href: '/amenidades' }
+  ],
+  amenities: [
+    { id: 'leed', icon: '/uploads/2024/09/building-icono.png', title: 'CERTIFICACIÓN LEED', description: 'Que garantiza contar con un edificio sostenible en el tiempo.' },
+    { id: 'seguro', icon: '/uploads/2024/09/ambienteok.png', title: 'AMBIENTE SEGURO', description: 'Seguridad proactiva y sustentada por tecnología avanzada.' },
+    { id: 'climatizacion', icon: '/uploads/2024/09/ico3.png', title: 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE', description: 'Esta tecnología permite generar un ahorro aproximado de 30% en el consumo eléctrico.' },
+    { id: 'aire-exterior', icon: '/uploads/2024/09/ico4.png', title: 'SISTEMA DE AIRE EXTERIOR', description: 'Necesario para la renovación de oxígeno de las oficinas, será suministrado y filtrado por medio de ventiladores de inyección de aire.' },
+    { id: 'muro-cortina', icon: '/uploads/2024/09/ico5.png', title: 'MURO CORTINA', description: 'Paneles de doble vidrio con cámara de aire por medio, para disminuir el ingreso del sol y optimizar el uso energético.' },
+    { id: 'ascensores', icon: '/uploads/2024/09/icoi6.png', title: '16 ASCENSORES', description: 'Los más rápidos del país.' }
+  ],
+  footer: { aboutTitle: 'Quienes Somos', aboutText: 'Somos el epicentro de la innovación y el progreso.', servicesTitle: 'Servicios', contactTitle: 'Contacto', address: 'Av. San Martín, Calle J.', phone: '+591 713-69822', email: 'info@manzana40.com', facebook: 'https://www.facebook.com/M40PlazaEmpresarial', instagram: 'https://www.instagram.com/manzana40.bo/' },
+  meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: '+591 71369822' }
+}
+
 async function getContent(): Promise<SiteContent> {
-  const dataPath = path.join(process.cwd(), 'data', 'site-content.json')
   try {
-    const fileContents = fs.readFileSync(dataPath, 'utf8')
-    return JSON.parse(fileContents)
-  } catch {
-    return {
-      sliders: [{ id: 'slider-1', type: 'image', src: '', poster: '/uploads/2024/09/slidernosotros.jpg', alt: 'Manzana40 Hero' }],
-      homepage: {
-        heroTitle: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
-        heroSubtitle: 'Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio.',
-        mainVideo: { src: '/uploads/2024/09/Hyperlapse-Manzana-40.mp4', poster: '/uploads/revslider/video-media/slider_1_layer.jpg' },
-        contactPhone: '+591 71369822',
-        featuresTitle: 'UN ECOSISTEMA DE POSIBILIDADES, UN MUNDO DE OPORTUNIDADES PARA TU NEGOCIO',
-        amenitiesTitle: 'UNA PLAZA EMPRESARIAL ÚNICA'
-      },
-      services: [
-        { id: 'oficinas', title: 'OFICINAS', description: 'En venta y alquiler', image: '/uploads/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg', href: '/oficinas' },
-        { id: 'centro-de-negocios', title: 'CENTRO DE NEGOCIOS', description: 'Eventos Corporativos', image: '/uploads/2024/09/oficina2.jpg', href: '/centro-de-negocios' },
-        { id: 'hub-40', title: 'HUB 40', description: 'Co-Work', image: '/uploads/2024/09/oficina3.jpg', href: '/hub-40' },
-        { id: 'boca', title: 'BOCA MIXTURA', description: 'Boulevard Gastronómico', image: '/uploads/2024/09/oficina4.jpg', href: '/boca' },
-        { id: 'amenidades', title: 'AMENIDADES', description: 'Pensadas en vos', image: '/uploads/2024/09/boutique.jpg', href: '/amenidades' }
-      ],
-      amenities: [
-        { id: 'leed', icon: '/uploads/2024/09/building-icono.png', title: 'CERTIFICACIÓN LEED', description: 'Que garantiza contar con un edificio sostenible en el tiempo.' },
-        { id: 'seguro', icon: '/uploads/2024/09/ambienteok.png', title: 'AMBIENTE SEGURO', description: 'Seguridad proactiva y sustentada por tecnología avanzada.' },
-        { id: 'climatizacion', icon: '/uploads/2024/09/ico3.png', title: 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE', description: 'Esta tecnología permite generar un ahorro aproximado de 30% en el consumo eléctrico.' },
-        { id: 'aire-exterior', icon: '/uploads/2024/09/ico4.png', title: 'SISTEMA DE AIRE EXTERIOR', description: 'Necesario para la renovación de oxígeno de las oficinas, será suministrado y filtrado por medio de ventiladores de inyección de aire.' },
-        { id: 'muro-cortina', icon: '/uploads/2024/09/ico5.png', title: 'MURO CORTINA', description: 'Paneles de doble vidrio con cámara de aire por medio, para disminuir el ingreso del sol y optimizar el uso energético.' },
-        { id: 'ascensores', icon: '/uploads/2024/09/icoi6.png', title: '16 ASCENSORES', description: 'Los más rápidos del país.' }
-      ],
-      footer: { aboutTitle: 'Quienes Somos', aboutText: 'Somos el epicentro de la innovación y el progreso.', servicesTitle: 'Servicios', contactTitle: 'Contacto', address: 'Av. San Martín, Calle J.', phone: '+591 713-69822', email: 'info@manzana40.com', facebook: 'https://www.facebook.com/M40PlazaEmpresarial', instagram: 'https://www.instagram.com/manzana40.bo/' },
-      meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: '+591 71369822' }
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+    const response = await fetch(`${baseUrl}/api/content/homepage`, {
+      cache: 'no-store'
+    })
+    if (response.ok) {
+      const data = await response.json()
+      return {
+        sliders: [{ id: 'slider-1', type: 'video', src: data.hero?.video || '', poster: data.hero?.poster || '', alt: 'Manzana40 Hero' }],
+        homepage: {
+          heroTitle: data.hero?.title || STATIC_FALLBACK.homepage.heroTitle,
+          heroSubtitle: data.hero?.subtitle || STATIC_FALLBACK.homepage.heroSubtitle,
+          mainVideo: { src: data.hero?.video || STATIC_FALLBACK.homepage.mainVideo.src, poster: data.hero?.poster || STATIC_FALLBACK.homepage.mainVideo.poster },
+          contactPhone: data.contactPhone || STATIC_FALLBACK.homepage.contactPhone,
+          featuresTitle: data.featuresTitle || STATIC_FALLBACK.homepage.featuresTitle,
+          amenitiesTitle: data.amenitiesTitle || STATIC_FALLBACK.homepage.amenitiesTitle
+        },
+        services: data.services?.length ? data.services : STATIC_FALLBACK.services,
+        amenities: data.amenities?.length ? data.amenities : STATIC_FALLBACK.amenities,
+        footer: data.footer ? {
+          aboutTitle: data.footer.aboutTitle || STATIC_FALLBACK.footer.aboutTitle,
+          aboutText: data.footer.aboutText || STATIC_FALLBACK.footer.aboutText,
+          servicesTitle: data.footer.servicesTitle || STATIC_FALLBACK.footer.servicesTitle,
+          contactTitle: data.footer.contactTitle || STATIC_FALLBACK.footer.contactTitle,
+          address: data.footer.address || STATIC_FALLBACK.footer.address,
+          phone: data.footer.phone || STATIC_FALLBACK.footer.phone,
+          email: data.footer.email || STATIC_FALLBACK.footer.email,
+          facebook: data.footer.facebook || STATIC_FALLBACK.footer.facebook,
+          instagram: data.footer.instagram || STATIC_FALLBACK.footer.instagram
+        } : STATIC_FALLBACK.footer,
+        meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: data.contactPhone || STATIC_FALLBACK.meta.phone }
+      }
     }
+  } catch (error) {
+    console.error('Failed to fetch from API, using static fallback:', error)
   }
+  return STATIC_FALLBACK
 }
 
 export default async function HomePage() {
@@ -119,25 +151,16 @@ export default async function HomePage() {
                       </div>
                     </div>
                   </div>
-                  <div className="elementor-element elementor-element-bed5b32 elementor-position-left taxi-choice-section-phone elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="bed5b32" data-element_type="widget" data-e-type="widget" data-widget_type="image-box.default">
-                    <div className="elementor-widget-container">
-                      <div className="elementor-image-box-wrapper">
-                        <figure className="elementor-image-box-img">
-                          <img loading="lazy" decoding="async" width="33" height="33" src="/uploads/2024/09/choice-phn-icon.png" alt="" />
-                        </figure>
-                        <div className="elementor-image-box-content">
-                          <h3 className="elementor-image-box-title">Agenda tu Visita</h3>
-                          <p className="elementor-image-box-description">{homepage.contactPhone}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </section>
 
+<HomePhoneCTA phone={homepage.contactPhone} />
+
 <ServicesSection title={homepage.featuresTitle} services={services} />
+
+          <HomepageEditorials />
 
           <section className="elementor-section elementor-top-section elementor-element elementor-element-65a4458b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="65a4458b" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-container elementor-column-gap-default">

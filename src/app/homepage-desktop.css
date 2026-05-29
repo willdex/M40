@@ -181,6 +181,21 @@
 .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-wrapper,
 .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-wrapper {
   text-align: center;
+  background: #252525;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 1px solid #333;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.elementor-54 .elementor-element.elementor-element-251d3e4b:hover .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-cca3426:hover .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-b16dfeb:hover .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-6decf9e:hover .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-fe2e502:hover .elementor-image-box-wrapper,
+.elementor-54 .elementor-element.elementor-element-701f1ae:hover .elementor-image-box-wrapper {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-img,
 .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-img,
@@ -188,7 +203,19 @@
 .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-img,
 .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-img,
 .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-img {
-  width: 30%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+}
+.elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-img img,
+.elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-img img,
+.elementor-54 .elementor-element.elementor-element-b16dfeb .elementor-image-box-img img,
+.elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-img img,
+.elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-img img,
+.elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-title,
 .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-title,
@@ -196,11 +223,12 @@
 .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-title,
 .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-title,
 .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-title {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   font-family: "Poppins", Sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #A4BDC1;
+  text-transform: uppercase;
 }
 .elementor-54 .elementor-element.elementor-element-251d3e4b .elementor-image-box-description,
 .elementor-54 .elementor-element.elementor-element-cca3426 .elementor-image-box-description,
@@ -209,9 +237,10 @@
 .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-description,
 .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-description {
   font-family: "Poppins", Sans-serif;
-  font-size: 16px;
+  font-size: 0.85rem;
   font-weight: 400;
-  color: #D3D3D3;
+  color: #999;
+  line-height: 1.5;
 }
 
 /* Video play button */

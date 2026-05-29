@@ -6,10 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:seed": "npx prisma db seed",
+    "db:push": "npx prisma db push",
+    "db:studio": "npx prisma studio"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.3",
+    "@prisma/adapter-libsql": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
     "next": "^14.2.0",
+    "next-auth": "^4.24.14",
+    "prisma": "^7.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -17,6 +32,7 @@
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "tsx": "^4.22.3",
     "typescript": "^5.0.0"
   }
 }
