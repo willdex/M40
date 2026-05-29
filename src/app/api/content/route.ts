@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 const dataPath = path.join(process.cwd(), 'data', 'site-content.json')
 
 export async function GET() {

@@ -3,6 +3,9 @@ import { writeFile, mkdir, unlink } from 'fs/promises'
 import { existsSync } from 'fs'
 import path from 'path'
 
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 const ALLOWED_TYPES = {
   image: ['image/jpeg', 'image/png', 'image/webp', 'image/svg+xml'],
   video: ['video/mp4', 'video/webm'],
