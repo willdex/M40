@@ -133,3 +133,17 @@ model EfficiencyItem {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+model HomepageEditorial {
+  id        String   @id @default(cuid())
+  type      String   @default("lifestyle") // lifestyle, community
+  title     String
+  subtitle  String   @default("")
+  paragraph String   @default("")
+  image     String   @default("")
+  images    String   @default("[]") // JSON array of image URLs for community type
+  active    Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

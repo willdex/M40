@@ -73,6 +73,18 @@ export interface SiteContent {
   meta: MetaContent
 }
 
+export interface HomepageEditorialSection {
+  id: string
+  type: 'lifestyle' | 'community'
+  title: string
+  subtitle: string
+  paragraph: string
+  image: string
+  images?: string[]
+  active: boolean
+  order: number
+}
+
 let cachedContent: SiteContent | null = null
 
 export async function getContent(): Promise<SiteContent> {

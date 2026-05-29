@@ -31,6 +31,18 @@ interface Amenity {
   active: boolean
 }
 
+interface EditorialSection {
+  id: string
+  type: 'lifestyle' | 'community'
+  title: string
+  subtitle: string
+  paragraph: string
+  image: string
+  images: string
+  active: boolean
+  order: number
+}
+
 export default function HomepageEditor() {
   const [hero, setHero] = useState<HeroContent>({
     heroTitle: '',
@@ -41,11 +53,12 @@ export default function HomepageEditor() {
   })
   const [services, setServices] = useState<Service[]>([])
   const [amenities, setAmenities] = useState<Amenity[]>([])
+  const [editorials, setEditorials] = useState<EditorialSection[]>([])
   const [featuresTitle, setFeaturesTitle] = useState('')
   const [amenitiesTitle, setAmenitiesTitle] = useState('')
   const [saving, setSaving] = useState(false)
   const [message, setMessage] = useState('')
-  const [activeTab, setActiveTab] = useState<'hero' | 'services' | 'amenities'>('hero')
+  const [activeTab, setActiveTab] = useState<'hero' | 'services' | 'amenities' | 'editorial'>('hero')
 
   useEffect(() => {
     loadContent()
@@ -53,10 +66,11 @@ export default function HomepageEditor() {
 
   const loadContent = async () => {
     try {
-      const [contentRes, servicesRes, amenitiesRes] = await Promise.all([
+      const [contentRes, servicesRes, amenitiesRes, editorialsRes] = await Promise.all([
         fetch('/api/content/homepage'),
         fetch('/api/content/services'),
-        fetch('/api/content/amenities')
+        fetch('/api/content/amenities'),
+        fetch('/api/content/homepage-editorial')
       ])
 
       if (contentRes.ok) {
@@ -78,6 +92,10 @@ export default function HomepageEditor() {
 
       if (amenitiesRes.ok) {
         setAmenities(await amenitiesRes.json())
+      }
+
+      if (editorialsRes.ok) {
+        setEditorials(await editorialsRes.json())
       }
     } catch (error) {
       console.error('Load error:', error)
@@ -198,6 +216,51 @@ export default function HomepageEditor() {
     }])
   }
 
+  const handleEditorialSave = async (editorial: EditorialSection) => {
+    try {
+      const method = editorials.find(e => e.id === editorial.id) ? 'PUT' : 'POST'
+      const response = await fetch('/api/content/homepage-editorial', {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(editorial)
+      })
+      if (response.ok) {
+        loadContent()
+        showMessage('Sección editorial guardada')
+      }
+    } catch (error) {
+      showMessage('Error al guardar sección editorial')
+    }
+  }
+
+  const handleEditorialDelete = async (id: string) => {
+    if (!confirm('¿Eliminar esta sección editorial?')) return
+    try {
+      const response = await fetch(`/api/content/homepage-editorial?id=${id}`, { method: 'DELETE' })
+      if (response.ok) {
+        loadContent()
+        showMessage('Sección editorial eliminada')
+      }
+    } catch (error) {
+      showMessage('Error al eliminar sección editorial')
+    }
+  }
+
+  const addNewEditorial = (type: 'lifestyle' | 'community') => {
+    const newEditorial: EditorialSection = {
+      id: '',
+      type,
+      title: '',
+      subtitle: '',
+      paragraph: '',
+      image: '',
+      images: '[]',
+      order: editorials.filter(e => e.type === type).length,
+      active: true
+    }
+    setEditorials(prev => [...prev, newEditorial])
+  }
+
   return (
     <div className="homepage-editor">
       <div className="homepage-editor__header">
@@ -225,6 +288,12 @@ export default function HomepageEditor() {
           onClick={() => setActiveTab('amenities')}
         >
           Amenidades ({amenities.length})
+        </button>
+        <button
+          className={`homepage-editor__tab ${activeTab === 'editorial' ? 'active' : ''}`}
+          onClick={() => setActiveTab('editorial')}
+        >
+          Editorial ({editorials.length})
         </button>
       </div>
 
@@ -404,6 +473,47 @@ export default function HomepageEditor() {
           </div>
         </div>
       )}
+
+      {activeTab === 'editorial' && (
+        <div className="homepage-editor__section">
+          <div className="homepage-editor__card">
+            <div className="homepage-editor__card-header">
+              <h3>Secciones Editoriales</h3>
+              <div className="homepage-editor__actions-inline">
+                <button className="homepage-editor__btn homepage-editor__btn--add" onClick={() => addNewEditorial('lifestyle')}>
+                  + Lifestyle
+                </button>
+                <button className="homepage-editor__btn homepage-editor__btn--add" onClick={() => addNewEditorial('community')}>
+                  + Community
+                </button>
+              </div>
+            </div>
+
+            {editorials.length === 0 ? (
+              <div className="homepage-editor__empty">
+                No hay secciones editoriales. Agrega una nueva.
+              </div>
+            ) : (
+              <div className="homepage-editor__list">
+                {editorials.map((editorial, index) => (
+                  <EditorialEditor
+                    key={editorial.id || `new-${index}`}
+                    editorial={editorial}
+                    onChange={(updated) => {
+                      setEditorials(prev => prev.map((e, i) => i === index ? updated : e))
+                    }}
+                    onSave={() => {
+                      const currentEditorial = editorials[index]
+                      handleEditorialSave(currentEditorial)
+                    }}
+                    onDelete={() => editorial.id && handleEditorialDelete(editorial.id)}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
@@ -533,6 +643,136 @@ function AmenityEditor({
               Guardar
             </button>
             {amenity.id && (
+              <button className="homepage-editor__btn homepage-editor__btn--delete" onClick={onDelete}>
+                Eliminar
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function EditorialEditor({
+  editorial,
+  onChange,
+  onSave,
+  onDelete
+}: {
+  editorial: EditorialSection
+  onChange: (e: EditorialSection) => void
+  onSave: () => void
+  onDelete: () => void
+}) {
+  const isLifestyle = editorial.type === 'lifestyle'
+
+  return (
+    <div className="editorial-editor">
+      <div className="editorial-editor__header">
+        <span className="editorial-editor__type">
+          {isLifestyle ? 'Lifestyle' : 'Community'}
+        </span>
+      </div>
+      <div className="editorial-editor__row">
+        {isLifestyle ? (
+          <div className="editorial-editor__media">
+            <AdminMediaPicker
+              label="Imagen principal"
+              value={editorial.image}
+              onChange={(url) => onChange({ ...editorial, image: url })}
+              category="editorial"
+              accept="image/*"
+              aspectRatio="3/4"
+            />
+          </div>
+        ) : (
+          <div className="editorial-editor__gallery">
+            <AdminMediaPicker
+              label="Imagen 1"
+              value={JSON.parse(editorial.images || '[]')[0] || ''}
+              onChange={(url) => {
+                const imgs = JSON.parse(editorial.images || '[]')
+                imgs[0] = url
+                onChange({ ...editorial, images: JSON.stringify(imgs) })
+              }}
+              category="editorial"
+              accept="image/*"
+              aspectRatio="4/3"
+            />
+            <AdminMediaPicker
+              label="Imagen 2"
+              value={JSON.parse(editorial.images || '[]')[1] || ''}
+              onChange={(url) => {
+                const imgs = JSON.parse(editorial.images || '[]')
+                imgs[1] = url
+                onChange({ ...editorial, images: JSON.stringify(imgs) })
+              }}
+              category="editorial"
+              accept="image/*"
+              aspectRatio="4/3"
+            />
+            <AdminMediaPicker
+              label="Imagen 3"
+              value={JSON.parse(editorial.images || '[]')[2] || ''}
+              onChange={(url) => {
+                const imgs = JSON.parse(editorial.images || '[]')
+                imgs[2] = url
+                onChange({ ...editorial, images: JSON.stringify(imgs) })
+              }}
+              category="editorial"
+              accept="image/*"
+              aspectRatio="4/3"
+            />
+          </div>
+        )}
+        <div className="editorial-editor__fields">
+          <input
+            type="text"
+            value={editorial.title}
+            onChange={(e) => onChange({ ...editorial, title: e.target.value })}
+            placeholder="Título de la sección"
+            className="editorial-editor__title"
+          />
+          <input
+            type="text"
+            value={editorial.subtitle}
+            onChange={(e) => onChange({ ...editorial, subtitle: e.target.value })}
+            placeholder="Subtítulo"
+            className="editorial-editor__subtitle"
+          />
+          <textarea
+            value={editorial.paragraph}
+            onChange={(e) => onChange({ ...editorial, paragraph: e.target.value })}
+            placeholder="Párrafo descriptivo"
+            rows={3}
+            className="editorial-editor__paragraph"
+          />
+          <div className="editorial-editor__meta">
+            <div className="editorial-editor__order">
+              <label>Orden</label>
+              <input
+                type="number"
+                value={editorial.order || 0}
+                onChange={(e) => onChange({ ...editorial, order: parseInt(e.target.value) || 0 })}
+                min="0"
+                className="editorial-editor__order-input"
+              />
+            </div>
+            <label className="editorial-editor__active">
+              <input
+                type="checkbox"
+                checked={editorial.active !== false}
+                onChange={(e) => onChange({ ...editorial, active: e.target.checked })}
+              />
+              Activo
+            </label>
+          </div>
+          <div className="editorial-editor__actions">
+            <button className="homepage-editor__btn homepage-editor__btn--save" onClick={onSave}>
+              Guardar
+            </button>
+            {editorial.id && (
               <button className="homepage-editor__btn homepage-editor__btn--delete" onClick={onDelete}>
                 Eliminar
               </button>
