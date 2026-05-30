@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ContentBlock from '@/components/ContentBlock'
 import FeaturesSectionClient from '@/components/FeaturesSectionClient'
+import { getNosotrosContent as getDbNosotros, getEfficiencyContent } from '@/lib/db-content'
 
 const STATIC_FALLBACK = {
   heroImage: '/static-assets/2024/09/slidernosotros.jpg',
@@ -100,32 +101,18 @@ const STATIC_FALLBACK = {
   ]
 }
 
-async function getNosotrosContent() {
+async function getContent() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-    const [nosotrosRes, efficiencyRes] = await Promise.all([
-      fetch(`${baseUrl}/api/content/nosotros`, { cache: 'no-store' }),
-      fetch(`${baseUrl}/api/content/efficiency`, { cache: 'no-store' })
+    const [dbNosotros, dbEfficiency] = await Promise.all([
+      getDbNosotros(),
+      getEfficiencyContent()
     ])
-    
-    if (!nosotrosRes.ok) {
-      console.error('Failed to fetch nosotros content, using fallback')
-      return STATIC_FALLBACK
-    }
-    
-    const data = await nosotrosRes.json()
-    let efficiencyItems = []
-    
-    if (efficiencyRes.ok) {
-      const efficiencyData = await efficiencyRes.json()
-      efficiencyItems = Array.isArray(efficiencyData) ? efficiencyData : []
-    }
-    
+
     return {
-      heroImage: data.hero?.image || STATIC_FALLBACK.heroImage,
-      heroAlt: data.hero?.alt || STATIC_FALLBACK.heroAlt,
-      contentBlocks: data.contentBlocks?.length > 0 ? data.contentBlocks : STATIC_FALLBACK.contentBlocks,
-      efficiencyItems: efficiencyItems.length > 0 ? efficiencyItems : STATIC_FALLBACK.efficiencyItems
+      heroImage: dbNosotros.hero?.image || STATIC_FALLBACK.heroImage,
+      heroAlt: dbNosotros.hero?.alt || STATIC_FALLBACK.heroAlt,
+      contentBlocks: dbNosotros.contentBlocks?.length > 0 ? dbNosotros.contentBlocks : STATIC_FALLBACK.contentBlocks,
+      efficiencyItems: dbEfficiency?.length > 0 ? dbEfficiency : STATIC_FALLBACK.efficiencyItems
     }
   } catch (error) {
     console.error('Error fetching nosotros content:', error)
@@ -134,7 +121,7 @@ async function getNosotrosContent() {
 }
 
 export default async function NosotrosPage() {
-  const content = await getNosotrosContent()
+  const content = await getContent()
 
   return (
     <div className="whole-layout">

@@ -3,10 +3,11 @@ import Footer from '@/components/Footer'
 import ServicesSection from '@/components/ServicesSection'
 import HomepageEditorials from '@/components/HomepageEditorials'
 import HomePhoneCTA from '@/components/HomePhoneCTA'
+import { getHomepageContent } from '@/lib/db-content'
 import type { SiteContent } from '@/lib/content'
 
 const STATIC_FALLBACK: SiteContent = {
-  sliders: [{ id: 'slider-1', type: 'image', src: '', poster: '/static-assets/2024/09/slidernosotros.jpg', alt: 'Manzana40 Hero' }],
+  sliders: [{ id: 'slider-1', type: 'video', src: '/static-assets/2024/09/Hyperlapse-Manzana-40.mp4', poster: '/static-assets/revslider/video-media/slider_1_layer.jpg', alt: 'Manzana40 Hero' }],
   homepage: {
     heroTitle: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
     heroSubtitle: 'Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio.',
@@ -36,40 +37,35 @@ const STATIC_FALLBACK: SiteContent = {
 
 async function getContent(): Promise<SiteContent> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
-    const response = await fetch(`${baseUrl}/api/content/homepage`, {
-      cache: 'no-store'
-    })
-    if (response.ok) {
-      const data = await response.json()
-      return {
-        sliders: [{ id: 'slider-1', type: 'video', src: data.hero?.video || '', poster: data.hero?.poster || '', alt: 'Manzana40 Hero' }],
-        homepage: {
-          heroTitle: data.hero?.title || STATIC_FALLBACK.homepage.heroTitle,
-          heroSubtitle: data.hero?.subtitle || STATIC_FALLBACK.homepage.heroSubtitle,
-          mainVideo: { src: data.hero?.video || STATIC_FALLBACK.homepage.mainVideo.src, poster: data.hero?.poster || STATIC_FALLBACK.homepage.mainVideo.poster },
-          contactPhone: data.contactPhone || STATIC_FALLBACK.homepage.contactPhone,
-          featuresTitle: data.featuresTitle || STATIC_FALLBACK.homepage.featuresTitle,
-          amenitiesTitle: data.amenitiesTitle || STATIC_FALLBACK.homepage.amenitiesTitle
-        },
-        services: data.services?.length ? data.services : STATIC_FALLBACK.services,
-        amenities: data.amenities?.length ? data.amenities : STATIC_FALLBACK.amenities,
-        footer: data.footer ? {
-          aboutTitle: data.footer.aboutTitle || STATIC_FALLBACK.footer.aboutTitle,
-          aboutText: data.footer.aboutText || STATIC_FALLBACK.footer.aboutText,
-          servicesTitle: data.footer.servicesTitle || STATIC_FALLBACK.footer.servicesTitle,
-          contactTitle: data.footer.contactTitle || STATIC_FALLBACK.footer.contactTitle,
-          address: data.footer.address || STATIC_FALLBACK.footer.address,
-          phone: data.footer.phone || STATIC_FALLBACK.footer.phone,
-          email: data.footer.email || STATIC_FALLBACK.footer.email,
-          facebook: data.footer.facebook || STATIC_FALLBACK.footer.facebook,
-          instagram: data.footer.instagram || STATIC_FALLBACK.footer.instagram
-        } : STATIC_FALLBACK.footer,
-        meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: data.contactPhone || STATIC_FALLBACK.meta.phone }
-      }
+    const dbContent = await getHomepageContent()
+
+    return {
+      sliders: [{ id: 'slider-1', type: 'video', src: dbContent.hero?.video || STATIC_FALLBACK.sliders![0].src, poster: dbContent.hero?.poster || STATIC_FALLBACK.sliders![0].poster, alt: 'Manzana40 Hero' }],
+      homepage: {
+        heroTitle: dbContent.hero?.title || STATIC_FALLBACK.homepage.heroTitle,
+        heroSubtitle: dbContent.hero?.subtitle || STATIC_FALLBACK.homepage.heroSubtitle,
+        mainVideo: { src: dbContent.hero?.video || STATIC_FALLBACK.homepage.mainVideo.src, poster: dbContent.hero?.poster || STATIC_FALLBACK.homepage.mainVideo.poster },
+        contactPhone: dbContent.contactPhone || STATIC_FALLBACK.homepage.contactPhone,
+        featuresTitle: dbContent.featuresTitle || STATIC_FALLBACK.homepage.featuresTitle,
+        amenitiesTitle: dbContent.amenitiesTitle || STATIC_FALLBACK.homepage.amenitiesTitle
+      },
+      services: dbContent.services?.length ? dbContent.services : STATIC_FALLBACK.services,
+      amenities: dbContent.amenities?.length ? dbContent.amenities : STATIC_FALLBACK.amenities,
+      footer: dbContent.footer ? {
+        aboutTitle: dbContent.footer.aboutTitle || STATIC_FALLBACK.footer.aboutTitle,
+        aboutText: dbContent.footer.aboutText || STATIC_FALLBACK.footer.aboutText,
+        servicesTitle: dbContent.footer.servicesTitle || STATIC_FALLBACK.footer.servicesTitle,
+        contactTitle: dbContent.footer.contactTitle || STATIC_FALLBACK.footer.contactTitle,
+        address: dbContent.footer.address || STATIC_FALLBACK.footer.address,
+        phone: dbContent.footer.phone || STATIC_FALLBACK.footer.phone,
+        email: dbContent.footer.email || STATIC_FALLBACK.footer.email,
+        facebook: dbContent.footer.facebook || STATIC_FALLBACK.footer.facebook,
+        instagram: dbContent.footer.instagram || STATIC_FALLBACK.footer.instagram
+      } : STATIC_FALLBACK.footer,
+      meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: dbContent.contactPhone || STATIC_FALLBACK.meta.phone }
     }
   } catch (error) {
-    console.error('Failed to fetch from API, using static fallback:', error)
+    console.error('Failed to fetch from database, using static fallback:', error)
   }
   return STATIC_FALLBACK
 }
