@@ -1,0 +1,221 @@
+{
+  "HomepageEditorial": [
+    {
+      "id": "cmpql70zz0000q0wkio8hy1sv",
+      "type": "lifestyle",
+      "title": "UN ESPACIO QUE IMPULSA\nLA FORMA EN QUE TRABAJAS",
+      "subtitle": "",
+      "paragraph": "Más que oficinas, Manzana 40 propone un entorno diseñado para conectar productividad, bienestar y experiencias. Un lugar donde cada espacio impulsa nuevas ideas, relaciones y oportunidades.",
+      "image": "/uploads/editorial/navidad-insta-2-1780040062373.png",
+      "images": "[]",
+      "active": 1,
+      "order": 0,
+      "createdAt": "2026-05-29T07:14:48.911+00:00",
+      "updatedAt": "2026-05-29T07:34:23.947+00:00"
+    },
+    {
+      "id": "cmpql710j0001q0wkctot9i49",
+      "type": "community",
+      "title": "UNA COMUNIDAD QUE\nGENERA OPORTUNIDADES",
+      "subtitle": "",
+      "paragraph": "Empresas, profesionales y marcas conviven en un entorno pensado para generar conexiones reales, colaboración y crecimiento.",
+      "image": "",
+      "images": "[\"/uploads/editorial/DSC08370-1780040030583.jpg\",\"/uploads/editorial/DSC00888--2--1780040009295.jpg\",\"/uploads/editorial/DSC08114--2--1780039961807.jpg\"]",
+      "active": 1,
+      "order": 1,
+      "createdAt": "2026-05-29T07:14:48.931+00:00",
+      "updatedAt": "2026-05-29T07:33:52.593+00:00"
+    }
+  ],
+  "Hero": [],
+  "ContentBlock": [],
+  "Feature": [],
+  "EfficiencyItem": [],
+  "Media": [
+    {
+      "id": "cmpqlqmhl0000gwwklb4hbwcv",
+      "filename": "boca22.jpg",
+      "originalName": "boca22.jpg",
+      "url": "/uploads/2024/09/boca22.jpg",
+      "category": "editorial",
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:30:03.225+00:00",
+      "updatedAt": "2026-05-29T07:30:03.225+00:00"
+    },
+    {
+      "id": "cmpqlqmi90001gwwknz7gtclx",
+      "filename": "ofic33.jpg",
+      "originalName": "ofic33.jpg",
+      "url": "/uploads/2024/09/ofic33.jpg",
+      "category": "editorial",
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:30:03.249+00:00",
+      "updatedAt": "2026-05-29T07:30:03.249+00:00"
+    },
+    {
+      "id": "cmpqlqmiy0002gwwkpx5k7pop",
+      "filename": "reuniion1-2048x1315.jpg",
+      "originalName": "reuniion1-2048x1315.jpg",
+      "url": "/uploads/2024/09/reuniion1-2048x1315.jpg",
+      "category": "editorial",
+      "mimeType": "image/jpeg",
+      "size": 0,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:30:03.274+00:00",
+      "updatedAt": "2026-05-29T07:30:03.274+00:00"
+    },
+    {
+      "id": "cmpqlqmje0003gwwkfc5465dn",
+      "filename": "HUB401-2048x1153.png",
+      "originalName": "HUB401-2048x1153.png",
+      "url": "/uploads/2024/09/HUB401-2048x1153.png",
+      "category": "editorial",
+      "mimeType": "image/png",
+      "size": 0,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:30:03.290+00:00",
+      "updatedAt": "2026-05-29T07:30:03.290+00:00"
+    },
+    {
+      "id": "cmpqlu0v500009owk54flcamo",
+      "filename": "DSC08114--2--1780039961807.jpg",
+      "originalName": "DSC08114 (2).jpg",
+      "url": "/uploads/editorial/DSC08114--2--1780039961807.jpg",
+      "category": "editorial",
+      "mimeType": "image/jpeg",
+      "size": 3295778,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:32:41.826+00:00",
+      "updatedAt": "2026-05-29T07:32:41.826+00:00"
+    },
+    {
+      "id": "cmpqluu1300019owkh1ungqr8",
+      "filename": "338A9467-1780039999619.jpg",
+      "originalName": "338A9467.jpg",
+      "url": "/uploads/editorial/338A9467-1780039999619.jpg",
+      "category": "editorial",
+      "mimeType": "image/jpeg",
+      "size": 1625388,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:33:19.623+00:00",
+      "updatedAt": "2026-05-29T07:33:19.623+00:00"
+    },
+    {
+      "id": "cmpqlv1i200029owkvugmnbsd",
+      "filename": "DSC00888--2--1780040009295.jpg",
+      "originalName": "DSC00888 (2).jpg",
+      "url": "/uploads/editorial/DSC00888--2--1780040009295.jpg",
+      "category": "editorial",
+      "mimeType": "image/jpeg",
+      "size": 5261774,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:33:29.306+00:00",
+      "updatedAt": "2026-05-29T07:33:29.306+00:00"
+    },
+    {
+      "id": "cmpqlvhyk00039owkde4rzdj0",
+      "filename": "DSC08370-1780040030583.jpg",
+      "originalName": "DSC08370.jpg",
+      "url": "/uploads/editorial/DSC08370-1780040030583.jpg",
+      "category": "editorial",
+      "mimeType": "image/jpeg",
+      "size": 3401138,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:33:50.636+00:00",
+      "updatedAt": "2026-05-29T07:33:50.636+00:00"
+    },
+    {
+      "id": "cmpqlw6gc00049owkttkp0d8s",
+      "filename": "navidad-insta-2-1780040062373.png",
+      "originalName": "navidad insta 2.png",
+      "url": "/uploads/editorial/navidad-insta-2-1780040062373.png",
+      "category": "editorial",
+      "mimeType": "image/png",
+      "size": 5370790,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:34:22.380+00:00",
+      "updatedAt": "2026-05-29T07:34:22.380+00:00"
+    },
+    {
+      "id": "cmpqmndi80000v8wk5jxpzvj1",
+      "filename": "VideoHomeage-1780041331138.mp4",
+      "originalName": "VideoHomeage.mp4",
+      "url": "/uploads/heroes/VideoHomeage-1780041331138.mp4",
+      "category": "heroes",
+      "mimeType": "video/mp4",
+      "size": 5526365,
+      "width": null,
+      "height": null,
+      "alt": "",
+      "createdAt": "2026-05-29T07:55:31.232+00:00",
+      "updatedAt": "2026-05-29T07:55:31.232+00:00"
+    }
+  ],
+  "FooterContent": [],
+  "SiteMeta": [
+    {
+      "id": "cmpqmnfyx0001v8wkljr10zr2",
+      "key": "homepage_heroVideo",
+      "value": "/uploads/heroes/VideoHomeage-1780041331138.mp4",
+      "updatedAt": "2026-05-29T07:55:34.425+00:00"
+    },
+    {
+      "id": "cmpqmnfzx0002v8wk2b9obqfw",
+      "key": "homepage_heroPoster",
+      "value": "",
+      "updatedAt": "2026-05-29T07:55:34.461+00:00"
+    },
+    {
+      "id": "cmpqmng0p0003v8wki8qui3wz",
+      "key": "homepage_heroTitle",
+      "value": "",
+      "updatedAt": "2026-05-29T07:55:34.489+00:00"
+    },
+    {
+      "id": "cmpqmng1l0004v8wk198re0ll",
+      "key": "homepage_heroSubtitle",
+      "value": "",
+      "updatedAt": "2026-05-29T07:55:34.521+00:00"
+    },
+    {
+      "id": "cmpqmng2c0005v8wk5qfr1pyt",
+      "key": "homepage_contactPhone",
+      "value": "",
+      "updatedAt": "2026-05-29T07:55:34.548+00:00"
+    },
+    {
+      "id": "cmpqmng350006v8wk55gtkkq0",
+      "key": "homepage_featuresTitle",
+      "value": "",
+      "updatedAt": "2026-05-29T07:55:34.577+00:00"
+    },
+    {
+      "id": "cmpqmng3y0007v8wk55yuj1of",
+      "key": "homepage_amenitiesTitle",
+      "value": "",
+      "updatedAt": "2026-05-29T07:55:34.606+00:00"
+    }
+  ]
+}

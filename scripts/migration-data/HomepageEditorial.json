@@ -1,0 +1,28 @@
+[
+  {
+    "id": "cmpql70zz0000q0wkio8hy1sv",
+    "type": "lifestyle",
+    "title": "UN ESPACIO QUE IMPULSA\nLA FORMA EN QUE TRABAJAS",
+    "subtitle": "",
+    "paragraph": "Más que oficinas, Manzana 40 propone un entorno diseñado para conectar productividad, bienestar y experiencias. Un lugar donde cada espacio impulsa nuevas ideas, relaciones y oportunidades.",
+    "image": "/uploads/editorial/navidad-insta-2-1780040062373.png",
+    "images": "[]",
+    "active": 1,
+    "order": 0,
+    "createdAt": "2026-05-29T07:14:48.911+00:00",
+    "updatedAt": "2026-05-29T07:34:23.947+00:00"
+  },
+  {
+    "id": "cmpql710j0001q0wkctot9i49",
+    "type": "community",
+    "title": "UNA COMUNIDAD QUE\nGENERA OPORTUNIDADES",
+    "subtitle": "",
+    "paragraph": "Empresas, profesionales y marcas conviven en un entorno pensado para generar conexiones reales, colaboración y crecimiento.",
+    "image": "",
+    "images": "[\"/uploads/editorial/DSC08370-1780040030583.jpg\",\"/uploads/editorial/DSC00888--2--1780040009295.jpg\",\"/uploads/editorial/DSC08114--2--1780039961807.jpg\"]",
+    "active": 1,
+    "order": 1,
+    "createdAt": "2026-05-29T07:14:48.931+00:00",
+    "updatedAt": "2026-05-29T07:33:52.593+00:00"
+  }
+]

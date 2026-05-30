@@ -124,7 +124,7 @@
   /* ===== AMENITIES SECTION (65a4458b) ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
     margin-top: 0;
-    padding: 30px 0;
+    padding: 15px 0;
   }
 
   .elementor-54 .elementor-element.elementor-element-4628239b .elementor-heading-title {
@@ -147,7 +147,7 @@
   .elementor-54 .elementor-element.elementor-element-ecd4ddf > .elementor-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
   }
 
   .elementor-54 .elementor-element.elementor-element-338adee1 .elementor-column,
@@ -163,7 +163,7 @@
   .elementor-54 .elementor-element.elementor-element-6decf9e .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-fe2e502 .elementor-image-box-wrapper,
   .elementor-54 .elementor-element.elementor-element-701f1ae .elementor-image-box-wrapper {
-    padding: 15px 12px;
+    padding: 10px 8px;
     margin: 0;
     height: 100%;
     box-sizing: border-box;
@@ -320,7 +320,7 @@
 
   /* ===== AMENITIES ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
-    padding: 20px 0;
+    padding: 10px 0;
   }
 
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {

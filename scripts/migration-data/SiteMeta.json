@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cmpqmnfyx0001v8wkljr10zr2",
+    "key": "homepage_heroVideo",
+    "value": "/uploads/heroes/VideoHomeage-1780041331138.mp4",
+    "updatedAt": "2026-05-29T07:55:34.425+00:00"
+  },
+  {
+    "id": "cmpqmnfzx0002v8wk2b9obqfw",
+    "key": "homepage_heroPoster",
+    "value": "",
+    "updatedAt": "2026-05-29T07:55:34.461+00:00"
+  },
+  {
+    "id": "cmpqmng0p0003v8wki8qui3wz",
+    "key": "homepage_heroTitle",
+    "value": "",
+    "updatedAt": "2026-05-29T07:55:34.489+00:00"
+  },
+  {
+    "id": "cmpqmng1l0004v8wk198re0ll",
+    "key": "homepage_heroSubtitle",
+    "value": "",
+    "updatedAt": "2026-05-29T07:55:34.521+00:00"
+  },
+  {
+    "id": "cmpqmng2c0005v8wk5qfr1pyt",
+    "key": "homepage_contactPhone",
+    "value": "",
+    "updatedAt": "2026-05-29T07:55:34.548+00:00"
+  },
+  {
+    "id": "cmpqmng350006v8wk55gtkkq0",
+    "key": "homepage_featuresTitle",
+    "value": "",
+    "updatedAt": "2026-05-29T07:55:34.577+00:00"
+  },
+  {
+    "id": "cmpqmng3y0007v8wk55yuj1of",
+    "key": "homepage_amenitiesTitle",
+    "value": "",
+    "updatedAt": "2026-05-29T07:55:34.606+00:00"
+  }
+]

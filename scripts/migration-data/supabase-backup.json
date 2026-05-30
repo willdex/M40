@@ -1,0 +1,65 @@
+{
+  "HomepageEditorial": {
+    "before": 0,
+    "data": []
+  },
+  "Hero": {
+    "before": 0,
+    "data": []
+  },
+  "ContentBlock": {
+    "before": 0,
+    "data": []
+  },
+  "Feature": {
+    "before": 0,
+    "data": []
+  },
+  "EfficiencyItem": {
+    "before": 0,
+    "data": []
+  },
+  "Media": {
+    "before": 0,
+    "data": []
+  },
+  "FooterContent": {
+    "before": 0,
+    "data": []
+  },
+  "SiteMeta": {
+    "before": 5,
+    "data": [
+      {
+        "id": "cmprkjqa80001i1g2uon5gsu6",
+        "key": "homepage_heroTitle",
+        "value": "LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.",
+        "updatedAt": "2026-05-29T23:44:28.112Z"
+      },
+      {
+        "id": "cmprkjrtm0002i1g2kkwhkwj6",
+        "key": "homepage_heroSubtitle",
+        "value": "Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio. Ubicada en el corazón financiero de Santa Cruz, diseñada para impulsar tu empresa y conectar con los mejores líderes.",
+        "updatedAt": "2026-05-29T23:44:30.106Z"
+      },
+      {
+        "id": "cmprkjtcv0003i1g2eschy3dm",
+        "key": "homepage_contactPhone",
+        "value": "+591 71369822",
+        "updatedAt": "2026-05-29T23:44:32.095Z"
+      },
+      {
+        "id": "cmprkjuw60004i1g2ph7411q2",
+        "key": "homepage_featuresTitle",
+        "value": "UN ECOSISTEMA DE POSIBILIDADES, UN MUNDO DE OPORTUNIDADES PARA TU NEGOCIO",
+        "updatedAt": "2026-05-29T23:44:34.086Z"
+      },
+      {
+        "id": "cmprkjwf10005i1g2ht9lf9x8",
+        "key": "homepage_amenitiesTitle",
+        "value": "UNA PLAZA EMPRESARIAL ÚNICA",
+        "updatedAt": "2026-05-29T23:44:36.062Z"
+      }
+    ]
+  }
+}
