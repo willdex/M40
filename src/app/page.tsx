@@ -7,11 +7,11 @@ import { getHomepageContent } from '@/lib/db-content'
 import type { SiteContent } from '@/lib/content'
 
 const STATIC_FALLBACK: SiteContent = {
-  sliders: [{ id: 'slider-1', type: 'video', src: '/static-assets/2024/09/Hyperlapse-Manzana-40.mp4', poster: '/static-assets/revslider/video-media/slider_1_layer.jpg', alt: 'Manzana40 Hero' }],
+  sliders: [{ id: 'slider-1', type: 'video', src: '/static-assets/videos/VideoHomeage.mp4', poster: '/static-assets/revslider/video-media/slider_1_layer.jpg', alt: 'Manzana40 Hero' }],
   homepage: {
     heroTitle: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
     heroSubtitle: 'Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio.',
-    mainVideo: { src: '/static-assets/2024/09/Hyperlapse-Manzana-40.mp4', poster: '/static-assets/revslider/video-media/slider_1_layer.jpg' },
+    mainVideo: { src: '/static-assets/videos/VideoHomeage.mp4', poster: '/static-assets/revslider/video-media/slider_1_layer.jpg' },
     contactPhone: '+591 71369822',
     featuresTitle: 'UN ECOSISTEMA DE POSIBILIDADES, UN MUNDO DE OPORTUNIDADES PARA TU NEGOCIO',
     amenitiesTitle: 'UNA PLAZA EMPRESARIAL ÚNICA'

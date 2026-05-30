@@ -20,7 +20,7 @@ const FALLBACK_LIFESTYLE: EditorialSection = {
   title: 'UN ESPACIO QUE IMPULSA\nLA FORMA EN QUE TRABAJAS',
   subtitle: '',
   paragraph: 'Más que oficinas, Manzana 40 propone un entorno diseñado para conectar productividad, bienestar y experiencias. Un lugar donde cada espacio impulsa nuevas ideas, relaciones y oportunidades.',
-  image: '/static-assets/2024/09/boca22.jpg',
+  image: '/static-assets/2024/09/boca.jpg',
   images: '[]',
   active: true,
   order: 0
