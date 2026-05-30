@@ -124,7 +124,12 @@
   /* ===== AMENITIES SECTION (65a4458b) ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
     margin-top: 0;
-    padding: 15px 0;
+    padding: 10px 0;
+  }
+
+  /* Override column gap default padding for amenities */
+  .elementor-54 .elementor-element.elementor-element-65a4458b .elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+    padding: 5px;
   }
 
   .elementor-54 .elementor-element.elementor-element-4628239b .elementor-heading-title {
@@ -210,10 +215,10 @@
 
   /* ===== YELLOW BANNER (471822f6) ===== */
   .elementor-54 .elementor-element.elementor-element-471822f6 {
-    padding: 30px 0;
-    min-height: auto;
-    background-size: 100% auto;
-    background-position: center center;
+    padding: 30px 0 !important;
+    min-height: auto !important;
+    background-size: 100% auto !important;
+    background-position: center center !important;
   }
 
   /* ===== INVESTMENT SECTION (1796b641) ===== */
@@ -322,11 +327,16 @@
 
   /* ===== AMENITIES ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
-    padding: 10px 0;
+    padding: 8px 0 !important;
   }
 
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {
-    padding: 15px 0 0 0;
+    padding: 8px 0 0 0;
+  }
+
+  /* Override column gap default padding for amenities */
+  .elementor-54 .elementor-element.elementor-element-65a4458b .elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+    padding: 4px !important;
   }
 
   /* ===== INVESTMENT ===== */
