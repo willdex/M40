@@ -498,6 +498,25 @@
   gap: 8px;
 }
 
+.homepage-editor__static-video {
+  background: #1B191A;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.homepage-editor__static-video video {
+  border-radius: 4px;
+  border: 1px solid #444;
+}
+
+.homepage-editor__video-note {
+  margin: 12px 0 0 0;
+  color: #888;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .homepage-editor {

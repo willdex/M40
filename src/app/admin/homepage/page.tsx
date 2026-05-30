@@ -302,13 +302,15 @@ export default function HomepageEditor() {
           <div className="homepage-editor__card">
             <h3>Media Hero</h3>
             <div className="homepage-editor__media-grid">
-              <AdminMediaPicker
-                label="Video Hero"
-                value={hero.heroVideo}
-                onChange={(url) => handleHeroChange('heroVideo', url)}
-                category="heroes"
-                accept="video/mp4,video/webm"
-              />
+              <div className="homepage-editor__field">
+                <label>Video Hero</label>
+                <div className="homepage-editor__static-video">
+                  <video src="/static-assets/2024/09/Hyperlapse-Manzana-40.mp4" controls style={{ maxWidth: '200px' }} />
+                  <p className="homepage-editor__video-note">
+                    El video hero es estático en producción. Para cambiarlo, actualiza el código fuente.
+                  </p>
+                </div>
+              </div>
               <AdminMediaPicker
                 label="Poster Hero"
                 value={hero.heroPoster}
