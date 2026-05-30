@@ -151,7 +151,7 @@ export default async function HomePage() {
                     <div className="elementor-widget-container">
                       <VideoOverlayClient
                         src={videoSection1.url}
-                        poster={videoSection1.poster || homepage.mainVideo.poster}
+                        poster={videoSection1.poster!}
                       />
                     </div>
                   </div>
