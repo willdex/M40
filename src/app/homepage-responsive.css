@@ -220,6 +220,7 @@
     min-height: auto !important;
     background-size: 100% auto !important;
     background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 
   /* ===== INVESTMENT SECTION (1796b641) ===== */
