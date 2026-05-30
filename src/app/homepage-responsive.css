@@ -124,7 +124,7 @@
   /* ===== AMENITIES SECTION (65a4458b) ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
     margin-top: 0;
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   /* Override column gap default padding for inner amenity rows */
@@ -153,6 +153,11 @@
   .elementor-54 .elementor-element.elementor-element-ecd4ddf > .elementor-container {
     display: flex;
     flex-direction: column;
+    gap: 2px;
+  }
+
+  /* Reduce gap between the two amenity rows (338adee1 and ecd4ddf) */
+  .elementor-54 .elementor-element.elementor-element-65a4458b > .elementor-container {
     gap: 4px;
   }
 
