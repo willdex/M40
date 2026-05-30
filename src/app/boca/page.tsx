@@ -4,20 +4,20 @@ import PageHero from '@/components/PageHero'
 import ContentWithImage from '@/components/ContentWithImage'
 
 const galleryImages = [
-  '/uploads/2024/09/bocamixtura123-768x576-1.jpg',
-  '/uploads/2024/09/boca33.jpg',
-  '/uploads/2024/09/boca22.jpg'
+  '/static-assets/2024/09/bocamixtura123-768x576-1.jpg',
+  '/static-assets/2024/09/boca33.jpg',
+  '/static-assets/2024/09/boca22.jpg'
 ]
 
 const restaurantImages = [
-  '/uploads/2024/09/tinto.png',
-  '/uploads/2024/09/tigre.png',
-  '/uploads/2024/09/oma.png',
-  '/uploads/2024/09/naranja.png',
-  '/uploads/2024/09/jaja.png',
-  '/uploads/2024/09/bbb.png',
-  '/uploads/2024/09/04-SERAFINA-1024x567-1.png',
-  '/uploads/2024/09/03-MANGAROSA-1024x567-1.png'
+  '/static-assets/2024/09/tinto.png',
+  '/static-assets/2024/09/tigre.png',
+  '/static-assets/2024/09/oma.png',
+  '/static-assets/2024/09/naranja.png',
+  '/static-assets/2024/09/jaja.png',
+  '/static-assets/2024/09/bbb.png',
+  '/static-assets/2024/09/04-SERAFINA-1024x567-1.png',
+  '/static-assets/2024/09/03-MANGAROSA-1024x567-1.png'
 ]
 
 export default function BocaPage() {
@@ -27,7 +27,7 @@ export default function BocaPage() {
 
       <main id="mid">
         <PageHero
-          image="/uploads/2024/09/boca-hero.jpg"
+          image="/static-assets/2024/09/boca-hero.jpg"
           title="Boca Mixtura"
           overlayEnabled={true}
           overlayOpacity={0.4}
@@ -36,7 +36,7 @@ export default function BocaPage() {
         <ContentWithImage
           title="Boulevard Gastronómico"
           text="Situado en la planta baja, Boca Mixtura está diseñado para combinar el gusto con los negocios. Un conjunto de restaurantes de algunos de los mejores desarrolladores gastronómicos del país."
-          image="/uploads/2024/09/comida.jpg"
+          image="/static-assets/2024/09/comida.jpg"
           imageAlt="Boulevard Gastronómico"
           ctaText="Más Información"
           ctaHref="https://bit.ly/oficinasm40"

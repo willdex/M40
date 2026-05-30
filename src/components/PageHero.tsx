@@ -40,7 +40,7 @@ export default function PageHero({
         alt={alt || title}
         className="page-hero__image"
         onError={(e) => {
-          e.currentTarget.src = '/uploads/2024/09/slidernosotros.jpg'
+          e.currentTarget.src = '/static-assets/2024/09/slidernosotros.jpg'
         }}
       />
     </section>

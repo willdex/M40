@@ -123,8 +123,8 @@ export function getDefaultContent(): SiteContent {
       heroTitle: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
       heroSubtitle: 'Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio.',
       mainVideo: {
-        src: '/uploads/2024/09/Hyperlapse-Manzana-40.mp4',
-        poster: '/uploads/revslider/video-media/slider_1_layer.jpg'
+        src: '/static-assets/2024/09/Hyperlapse-Manzana-40.mp4',
+        poster: '/static-assets/revslider/video-media/slider_1_layer.jpg'
       },
       contactPhone: '+591 71369822',
       featuresTitle: 'UN ECOSISTEMA DE POSIBILIDADES, UN MUNDO DE OPORTUNIDADES PARA TU NEGOCIO',

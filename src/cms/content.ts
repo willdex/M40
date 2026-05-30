@@ -72,15 +72,15 @@ export const siteContent: SiteContent = {
       {
         id: 'slider-1',
         type: 'video',
-        src: '/uploads/2024/09/slider.mp4',
-        poster: '/uploads/2024/09/slidernosotros.jpg'
+        src: '/static-assets/2024/09/slider.mp4',
+        poster: '/static-assets/2024/09/slidernosotros.jpg'
       }
     ],
     mainVideo: {
       id: 'main-video',
       type: 'hosted',
-      src: '/uploads/2024/09/Hyperlapse-Manzana-40.mp4',
-      poster: '/uploads/revslider/video-media/slider_1_layer.jpg'
+      src: '/static-assets/2024/09/Hyperlapse-Manzana-40.mp4',
+      poster: '/static-assets/revslider/video-media/slider_1_layer.jpg'
     },
     contactPhone: '+591 71369822',
     heroTitle: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
@@ -92,72 +92,72 @@ export const siteContent: SiteContent = {
         id: 'oficinas',
         title: 'OFICINAS',
         description: 'En venta y alquiler',
-        image: '/uploads/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg',
+        image: '/static-assets/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg',
         href: '/oficinas'
       },
       {
         id: 'centro-de-negocios',
         title: 'CENTRO DE NEGOCIOS',
         description: 'Eventos Corporativos',
-        image: '/uploads/2024/09/oficina2.jpg',
+        image: '/static-assets/2024/09/oficina2.jpg',
         href: '/centro-de-negocios'
       },
       {
         id: 'hub-40',
         title: 'HUB 40',
         description: 'Co-Work',
-        image: '/uploads/2024/09/oficina3.jpg',
+        image: '/static-assets/2024/09/oficina3.jpg',
         href: '/hub-40'
       },
       {
         id: 'boca',
         title: 'BOCA MIXTURA',
         description: 'Boulevard Gastronómico',
-        image: '/uploads/2024/09/oficina4.jpg',
+        image: '/static-assets/2024/09/oficina4.jpg',
         href: '/boca'
       },
       {
         id: 'amenidades',
         title: 'AMENIDADES',
         description: 'Pensadas en vos',
-        image: '/uploads/2024/09/boutique.jpg',
+        image: '/static-assets/2024/09/boutique.jpg',
         href: '/amenidades'
       }
     ],
     amenities: [
       {
         id: 'leed',
-        icon: '/uploads/2024/09/building-icono.png',
+        icon: '/static-assets/2024/09/building-icono.png',
         title: 'CERTIFICACIÓN LEED',
         description: 'Que garantiza contar con un edificio sostenible en el tiempo.'
       },
       {
         id: 'seguro',
-        icon: '/uploads/2024/09/ambienteok.png',
+        icon: '/static-assets/2024/09/ambienteok.png',
         title: 'AMBIENTE SEGURO',
         description: 'Seguridad proactiva y sustentada por tecnología avanzada.'
       },
       {
         id: 'climatizacion',
-        icon: '/uploads/2024/09/ico3.png',
+        icon: '/static-assets/2024/09/ico3.png',
         title: 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE',
         description: 'Esta tecnología permite generar un ahorro aproximado de 30% en el consumo eléctrico.'
       },
       {
         id: 'aire-exterior',
-        icon: '/uploads/2024/09/ico4.png',
+        icon: '/static-assets/2024/09/ico4.png',
         title: 'SISTEMA DE AIRE EXTERIOR',
         description: 'Necesario para la renovación de oxígeno de las oficinas, será suministrado y filtrado por medio de ventiladores de inyección de aire.'
       },
       {
         id: 'muro-cortina',
-        icon: '/uploads/2024/09/ico5.png',
+        icon: '/static-assets/2024/09/ico5.png',
         title: 'MURO CORTINA',
         description: 'Paneles de doble vidrio con cámara de aire por medio, para disminuir el ingreso del sol y optimizar el uso energético.'
       },
       {
         id: 'ascensores',
-        icon: '/uploads/2024/09/icoi6.png',
+        icon: '/static-assets/2024/09/icoi6.png',
         title: '16 ASCENSORES',
         description: 'Los más rápidos del país.'
       }
@@ -165,7 +165,7 @@ export const siteContent: SiteContent = {
     videoSection: {
       title: '¡Atrévete a Soñarlo!',
       youtubeUrl: 'https://www.youtube.com/watch?v=XHOmBV4js_E',
-      poster: '/uploads/2024/09/hyperportada.jpg'
+      poster: '/static-assets/2024/09/hyperportada.jpg'
     }
   },
   footer: {

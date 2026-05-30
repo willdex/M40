@@ -6,29 +6,29 @@ import HomePhoneCTA from '@/components/HomePhoneCTA'
 import type { SiteContent } from '@/lib/content'
 
 const STATIC_FALLBACK: SiteContent = {
-  sliders: [{ id: 'slider-1', type: 'image', src: '', poster: '/uploads/2024/09/slidernosotros.jpg', alt: 'Manzana40 Hero' }],
+  sliders: [{ id: 'slider-1', type: 'image', src: '', poster: '/static-assets/2024/09/slidernosotros.jpg', alt: 'Manzana40 Hero' }],
   homepage: {
     heroTitle: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
     heroSubtitle: 'Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio.',
-    mainVideo: { src: '/uploads/2024/09/Hyperlapse-Manzana-40.mp4', poster: '/uploads/revslider/video-media/slider_1_layer.jpg' },
+    mainVideo: { src: '/static-assets/2024/09/Hyperlapse-Manzana-40.mp4', poster: '/static-assets/revslider/video-media/slider_1_layer.jpg' },
     contactPhone: '+591 71369822',
     featuresTitle: 'UN ECOSISTEMA DE POSIBILIDADES, UN MUNDO DE OPORTUNIDADES PARA TU NEGOCIO',
     amenitiesTitle: 'UNA PLAZA EMPRESARIAL ÚNICA'
   },
   services: [
-    { id: 'oficinas', title: 'OFICINAS', description: 'En venta y alquiler', image: '/uploads/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg', href: '/oficinas' },
-    { id: 'centro-de-negocios', title: 'CENTRO DE NEGOCIOS', description: 'Eventos Corporativos', image: '/uploads/2024/09/oficina2.jpg', href: '/centro-de-negocios' },
-    { id: 'hub-40', title: 'HUB 40', description: 'Co-Work', image: '/uploads/2024/09/oficina3.jpg', href: '/hub-40' },
-    { id: 'boca', title: 'BOCA MIXTURA', description: 'Boulevard Gastronómico', image: '/uploads/2024/09/oficina4.jpg', href: '/boca' },
-    { id: 'amenidades', title: 'AMENIDADES', description: 'Pensadas en vos', image: '/uploads/2024/09/boutique.jpg', href: '/amenidades' }
+    { id: 'oficinas', title: 'OFICINAS', description: 'En venta y alquiler', image: '/static-assets/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg', href: '/oficinas' },
+    { id: 'centro-de-negocios', title: 'CENTRO DE NEGOCIOS', description: 'Eventos Corporativos', image: '/static-assets/2024/09/oficina2.jpg', href: '/centro-de-negocios' },
+    { id: 'hub-40', title: 'HUB 40', description: 'Co-Work', image: '/static-assets/2024/09/oficina3.jpg', href: '/hub-40' },
+    { id: 'boca', title: 'BOCA MIXTURA', description: 'Boulevard Gastronómico', image: '/static-assets/2024/09/oficina4.jpg', href: '/boca' },
+    { id: 'amenidades', title: 'AMENIDADES', description: 'Pensadas en vos', image: '/static-assets/2024/09/boutique.jpg', href: '/amenidades' }
   ],
   amenities: [
-    { id: 'leed', icon: '/uploads/2024/09/building-icono.png', title: 'CERTIFICACIÓN LEED', description: 'Que garantiza contar con un edificio sostenible en el tiempo.' },
-    { id: 'seguro', icon: '/uploads/2024/09/ambienteok.png', title: 'AMBIENTE SEGURO', description: 'Seguridad proactiva y sustentada por tecnología avanzada.' },
-    { id: 'climatizacion', icon: '/uploads/2024/09/ico3.png', title: 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE', description: 'Esta tecnología permite generar un ahorro aproximado de 30% en el consumo eléctrico.' },
-    { id: 'aire-exterior', icon: '/uploads/2024/09/ico4.png', title: 'SISTEMA DE AIRE EXTERIOR', description: 'Necesario para la renovación de oxígeno de las oficinas, será suministrado y filtrado por medio de ventiladores de inyección de aire.' },
-    { id: 'muro-cortina', icon: '/uploads/2024/09/ico5.png', title: 'MURO CORTINA', description: 'Paneles de doble vidrio con cámara de aire por medio, para disminuir el ingreso del sol y optimizar el uso energético.' },
-    { id: 'ascensores', icon: '/uploads/2024/09/icoi6.png', title: '16 ASCENSORES', description: 'Los más rápidos del país.' }
+    { id: 'leed', icon: '/static-assets/2024/09/building-icono.png', title: 'CERTIFICACIÓN LEED', description: 'Que garantiza contar con un edificio sostenible en el tiempo.' },
+    { id: 'seguro', icon: '/static-assets/2024/09/ambienteok.png', title: 'AMBIENTE SEGURO', description: 'Seguridad proactiva y sustentada por tecnología avanzada.' },
+    { id: 'climatizacion', icon: '/static-assets/2024/09/ico3.png', title: 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE', description: 'Esta tecnología permite generar un ahorro aproximado de 30% en el consumo eléctrico.' },
+    { id: 'aire-exterior', icon: '/static-assets/2024/09/ico4.png', title: 'SISTEMA DE AIRE EXTERIOR', description: 'Necesario para la renovación de oxígeno de las oficinas, será suministrado y filtrado por medio de ventiladores de inyección de aire.' },
+    { id: 'muro-cortina', icon: '/static-assets/2024/09/ico5.png', title: 'MURO CORTINA', description: 'Paneles de doble vidrio con cámara de aire por medio, para disminuir el ingreso del sol y optimizar el uso energético.' },
+    { id: 'ascensores', icon: '/static-assets/2024/09/icoi6.png', title: '16 ASCENSORES', description: 'Los más rápidos del país.' }
   ],
   footer: { aboutTitle: 'Quienes Somos', aboutText: 'Somos el epicentro de la innovación y el progreso.', servicesTitle: 'Servicios', contactTitle: 'Contacto', address: 'Av. San Martín, Calle J.', phone: '+591 713-69822', email: 'info@manzana40.com', facebook: 'https://www.facebook.com/M40PlazaEmpresarial', instagram: 'https://www.instagram.com/manzana40.bo/' },
   meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: '+591 71369822' }
@@ -109,7 +109,7 @@ export default async function HomePage() {
               ) : (
                 <img
                   className="hero-image"
-                  src={sliders?.[0]?.poster || homepage.mainVideo.poster || '/uploads/2024/09/slidernosotros.jpg'}
+                  src={sliders?.[0]?.poster || homepage.mainVideo.poster || '/static-assets/2024/09/slidernosotros.jpg'}
                   alt={sliders?.[0]?.alt || 'Manzana40 Hero'}
                 />
               )}
@@ -122,7 +122,7 @@ export default async function HomePage() {
                 <div className="elementor-widget-wrap elementor-element-populated">
                   <div className="elementor-element elementor-element-6affac0a elementor-widget elementor-widget-image" data-id="6affac0a" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
                     <div className="elementor-widget-container">
-                      <img decoding="async" width="1024" height="1024" src="/uploads/2024/09/manzn2.jpg" alt="" />
+                      <img decoding="async" width="1024" height="1024" src="/static-assets/2024/09/manzn2.jpg" alt="" />
                     </div>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default async function HomePage() {
                             <div className="elementor-widget-container">
                               <div className="elementor-image-box-wrapper">
                                 <figure className="elementor-image-box-img">
-                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[0]?.icon || '/uploads/2024/09/building-icono.png'} alt="" />
+                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[0]?.icon || '/static-assets/2024/09/building-icono.png'} alt="" />
                                 </figure>
                                 <div className="elementor-image-box-content">
                                   <h3 className="elementor-image-box-title">{amenities[0]?.title || 'CERTIFICACIÓN LEED'}</h3>
@@ -201,7 +201,7 @@ export default async function HomePage() {
                             <div className="elementor-widget-container">
                               <div className="elementor-image-box-wrapper">
                                 <figure className="elementor-image-box-img">
-                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[1]?.icon || '/uploads/2024/09/ambienteok.png'} alt="" />
+                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[1]?.icon || '/static-assets/2024/09/ambienteok.png'} alt="" />
                                 </figure>
                                 <div className="elementor-image-box-content">
                                   <h3 className="elementor-image-box-title">{amenities[1]?.title || 'AMBIENTE SEGURO'}</h3>
@@ -220,7 +220,7 @@ export default async function HomePage() {
                             <div className="elementor-widget-container">
                               <div className="elementor-image-box-wrapper">
                                 <figure className="elementor-image-box-img">
-                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[2]?.icon || '/uploads/2024/09/ico3.png'} alt="" />
+                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[2]?.icon || '/static-assets/2024/09/ico3.png'} alt="" />
                                 </figure>
                                 <div className="elementor-image-box-content">
                                   <h3 className="elementor-image-box-title">{amenities[2]?.title || 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE'}</h3>
@@ -241,7 +241,7 @@ export default async function HomePage() {
                             <div className="elementor-widget-container">
                               <div className="elementor-image-box-wrapper">
                                 <figure className="elementor-image-box-img">
-                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[3]?.icon || '/uploads/2024/09/ico4.png'} alt="" />
+                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[3]?.icon || '/static-assets/2024/09/ico4.png'} alt="" />
                                 </figure>
                                 <div className="elementor-image-box-content">
                                   <h3 className="elementor-image-box-title">{amenities[3]?.title || 'SISTEMA DE AIRE EXTERIOR'}</h3>
@@ -258,7 +258,7 @@ export default async function HomePage() {
                             <div className="elementor-widget-container">
                               <div className="elementor-image-box-wrapper">
                                 <figure className="elementor-image-box-img">
-                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[4]?.icon || '/uploads/2024/09/ico5.png'} alt="" />
+                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[4]?.icon || '/static-assets/2024/09/ico5.png'} alt="" />
                                 </figure>
                                 <div className="elementor-image-box-content">
                                   <h3 className="elementor-image-box-title">{amenities[4]?.title || 'MURO CORTINA'}</h3>
@@ -275,7 +275,7 @@ export default async function HomePage() {
                             <div className="elementor-widget-container">
                               <div className="elementor-image-box-wrapper">
                                 <figure className="elementor-image-box-img">
-                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[5]?.icon || '/uploads/2024/09/icoi6.png'} alt="" />
+                                  <img loading="lazy" decoding="async" width="106" height="82" src={amenities[5]?.icon || '/static-assets/2024/09/icoi6.png'} alt="" />
                                 </figure>
                                 <div className="elementor-image-box-content">
                                   <h3 className="elementor-image-box-title">{amenities[5]?.title || '16 ASCENSORES'}</h3>
@@ -321,7 +321,7 @@ export default async function HomePage() {
                         <div className="elementor-widget-wrap elementor-element-populated">
                           <div className="elementor-element elementor-element-301458fe elementor-widget elementor-widget-image" data-id="301458fe" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
                             <div className="elementor-widget-container">
-                              <img loading="lazy" decoding="async" width="500" height="500" src="/uploads/2024/09/ofic33.jpg" alt="" />
+                              <img loading="lazy" decoding="async" width="500" height="500" src="/static-assets/2024/09/ofic33.jpg" alt="" />
                             </div>
                           </div>
                           <div className="elementor-element elementor-element-589d8b34 elementor-widget elementor-widget-heading" data-id="589d8b34" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
@@ -352,7 +352,7 @@ export default async function HomePage() {
                         <div className="elementor-widget-wrap elementor-element-populated">
                           <div className="elementor-element elementor-element-6f3248b1 elementor-widget elementor-widget-image" data-id="6f3248b1" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
                             <div className="elementor-widget-container">
-                              <img loading="lazy" decoding="async" width="800" height="800" src="/uploads/2024/09/ofici44.webp" alt="" />
+                              <img loading="lazy" decoding="async" width="800" height="800" src="/static-assets/2024/09/ofici44.webp" alt="" />
                             </div>
                           </div>
                           <div className="elementor-element elementor-element-573a9bb7 elementor-widget elementor-widget-heading" data-id="573a9bb7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
@@ -386,7 +386,7 @@ export default async function HomePage() {
                         <div className="elementor-widget-wrap elementor-element-populated">
                           <div className="elementor-element elementor-element-41bff692 elementor-widget elementor-widget-image" data-id="41bff692" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
                             <div className="elementor-widget-container">
-                              <img loading="lazy" decoding="async" width="500" height="500" src="/uploads/2024/09/ofici55.jpg" alt="" />
+                              <img loading="lazy" decoding="async" width="500" height="500" src="/static-assets/2024/09/ofici55.jpg" alt="" />
                             </div>
                           </div>
                           <div className="elementor-element elementor-element-71da11a1 elementor-widget elementor-widget-heading" data-id="71da11a1" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
@@ -452,7 +452,7 @@ export default async function HomePage() {
                             <div className="elementor-widget-container">
                               <div className="elementor-wrapper elementor-open-inline">
                                 <div className="elementor-video"></div>
-                                <div className="elementor-custom-embed-image-overlay" style={{ backgroundImage: 'url(/uploads/2024/09/hyperportada.jpg)' }}>
+                                <div className="elementor-custom-embed-image-overlay" style={{ backgroundImage: 'url(/static-assets/2024/09/hyperportada.jpg)' }}>
                                   <div className="elementor-custom-embed-play" role="button" aria-label="Reproducir vídeo" tabIndex={0}>
                                     <i aria-hidden="true" className="eicon-play"></i>
                                   </div>

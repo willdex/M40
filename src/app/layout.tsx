@@ -26,15 +26,15 @@ export default function RootLayout({
         <link rel="stylesheet" href="/plugins/elementor/assets/css/widget-image-box.minfb3d.css" />
 
         {/* Header & Footer CSS */}
-        <link rel="stylesheet" href="/uploads/elementor/css/post-634649.css" />
-        <link rel="stylesheet" href="/uploads/elementor/css/post-2314649.css" />
+        <link rel="stylesheet" href="/static-assets/elementor/css/post-634649.css" />
+        <link rel="stylesheet" href="/static-assets/elementor/css/post-2314649.css" />
 
         {/* Homepage CSS */}
-        <link rel="stylesheet" href="/uploads/elementor/css/post-54a1d3.css" />
+        <link rel="stylesheet" href="/static-assets/elementor/css/post-54a1d3.css" />
 
         {/* Typography Fonts */}
-        <link rel="stylesheet" href="/uploads/elementor/google-fonts/css/robotoc199.css" />
-        <link rel="stylesheet" href="/uploads/elementor/google-fonts/css/robotoslab3a4c.css" />
+        <link rel="stylesheet" href="/static-assets/elementor/google-fonts/css/robotoc199.css" />
+        <link rel="stylesheet" href="/static-assets/elementor/google-fonts/css/robotoslab3a4c.css" />
 
         {/* Call-to-Action Widget CSS */}
         <link rel="stylesheet" href="/plugins/elementor-pro/assets/css/widget-call-to-action.mine92f.css" />
@@ -57,7 +57,7 @@ export default function RootLayout({
         {/* Posterity Theme CSS */}
         <link rel="stylesheet" href="/wp-content/themes/posterity/style5152.css" />
 
-        <link rel="icon" href="/uploads/2025/07/cropped-favicon-32x32-1-1-32x32.png" />
+        <link rel="icon" href="/static-assets/2025/07/cropped-favicon-32x32-1-1-32x32.png" />
       </head>
       <body id="top" className="home wp-singular page-template page-template-elementor_header_footer page page-id-54 wp-custom-logo wp-theme-posterity ehf-header ehf-footer ehf-template-posterity ehf-stylesheet-posterity header-horizontal site-layout-full elementor-default elementor-template-full-width elementor-kit-55 elementor-page elementor-page-54">
         <a className="skip-link" href="#content">Saltar al contenido</a>

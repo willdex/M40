@@ -29,7 +29,7 @@ interface OficinasContent {
 
 const STATIC_FALLBACK: OficinasContent = {
   hero: {
-    image: '/uploads/2024/09/oficinas-hero.jpg',
+    image: '/static-assets/2024/09/oficinas-hero.jpg',
     title: 'OFICINAS'
   },
   sections: [
@@ -37,7 +37,7 @@ const STATIC_FALLBACK: OficinasContent = {
       id: 'flexibles',
       title: 'OFICINAS FLEXIBLES',
       text: 'En Manzana 40 existen muchos tipos de oficinas que se adecuan a las necesidades de cada empresa. Puedes optar por oficinas en obra gris, obra fina o proyectos llave en mano.',
-      image: '/uploads/2024/09/oficina232.png',
+      image: '/static-assets/2024/09/oficina232.png',
       imageAlt: 'Oficinas Flexibles',
       reverse: false,
       features: ['Alquiler', 'Compra', 'Alquiler con opción a compra'],
@@ -50,7 +50,7 @@ const STATIC_FALLBACK: OficinasContent = {
       id: 'dimension',
       title: 'Oficinas que se adaptan perfectamente a la dimensión de su empresa',
       text: 'Oficinas desde 56 a 960 m2. Diseñadas para brindar un ambiente de trabajo altamente estimulante. Espacios eficientes con amplia vista de la ciudad, una luminosidad controlada, y un sistema de ventanales que aislan el ruido y la temperatura. Todo apoyado con tecnología de punta que les permite contar con un gran soporte de redes digitales e Internet.',
-      image: '/uploads/2024/09/sss.png',
+      image: '/static-assets/2024/09/sss.png',
       imageAlt: 'Oficinas adaptadas',
       reverse: true,
       features: ['Alquiler', 'Compra', 'Alquiler con opción a compra'],
@@ -63,7 +63,7 @@ const STATIC_FALLBACK: OficinasContent = {
       id: 'llave',
       title: 'Proyectos llave en mano',
       text: 'Olvídate de los problemas que trae consigo trasladarte de oficina o iniciar un nuevo proyecto y deja todo en manos de un equipo especializado, capaz de materializar tus sueños y convertirlos en una oficina funcional, diseñada a medida y con todo lo que tu negocio necesita para triunfar.',
-      image: '/uploads/2024/09/323.jpg',
+      image: '/static-assets/2024/09/323.jpg',
       imageAlt: 'Proyectos llave en mano',
       reverse: false,
       features: [],

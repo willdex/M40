@@ -20,7 +20,7 @@ const FALLBACK_LIFESTYLE: EditorialSection = {
   title: 'UN ESPACIO QUE IMPULSA\nLA FORMA EN QUE TRABAJAS',
   subtitle: '',
   paragraph: 'Más que oficinas, Manzana 40 propone un entorno diseñado para conectar productividad, bienestar y experiencias. Un lugar donde cada espacio impulsa nuevas ideas, relaciones y oportunidades.',
-  image: '/uploads/2024/09/boca22.jpg',
+  image: '/static-assets/2024/09/boca22.jpg',
   images: '[]',
   active: true,
   order: 0
@@ -33,7 +33,7 @@ const FALLBACK_COMMUNITY: EditorialSection = {
   subtitle: '',
   paragraph: 'Empresas, profesionales y marcas conviven en un entorno pensado para generar conexiones reales, colaboración y crecimiento.',
   image: '',
-  images: JSON.stringify(['/uploads/2024/09/ofic33.jpg', '/uploads/2024/09/reuniion1-2048x1315.jpg', '/uploads/2024/09/HUB401-2048x1153.png']),
+  images: JSON.stringify(['/static-assets/2024/09/ofic33.jpg', '/static-assets/2024/09/reuniion1-2048x1315.jpg', '/static-assets/2024/09/HUB401-2048x1153.png']),
   active: true,
   order: 1
 }
@@ -125,13 +125,13 @@ export default function HomepageEditorials() {
             ) : (
               <>
                 <div className="homepage-community__item">
-                  <img className="homepage-community__img" src="/uploads/2024/09/ofic33.jpg" alt="Manzana40 Business" loading="lazy" />
+                  <img className="homepage-community__img" src="/static-assets/2024/09/ofic33.jpg" alt="Manzana40 Business" loading="lazy" />
                 </div>
                 <div className="homepage-community__item">
-                  <img className="homepage-community__img" src="/uploads/2024/09/reuniion1-2048x1315.png" alt="Manzana40 Networking" loading="lazy" />
+                  <img className="homepage-community__img" src="/static-assets/2024/09/reuniion1-2048x1315.png" alt="Manzana40 Networking" loading="lazy" />
                 </div>
                 <div className="homepage-community__item">
-                  <img className="homepage-community__img" src="/uploads/2024/09/HUB401-2048x1153.png" alt="Manzana40 Community" loading="lazy" />
+                  <img className="homepage-community__img" src="/static-assets/2024/09/HUB401-2048x1153.png" alt="Manzana40 Community" loading="lazy" />
                 </div>
               </>
             )}

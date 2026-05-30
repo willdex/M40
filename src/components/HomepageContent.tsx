@@ -35,8 +35,8 @@ const fallbackData: HomepageData = {
   hero: {
     title: 'LA PLAZA EMPRESARIAL MÁS IMPORTANTE DEL PAÍS.',
     subtitle: 'Un ecosistema de posibilidades, un mundo de oportunidades para tu negocio. Ubicada en el corazón financiero de Santa Cruz, diseñada para impulsar tu empresa y conectar con los mejores líderes.',
-    video: '/uploads/2024/09/Hyperlapse-Manzana-40.mp4',
-    poster: '/uploads/revslider/video-media/slider_1_layer.jpg'
+    video: '/static-assets/2024/09/Hyperlapse-Manzana-40.mp4',
+    poster: '/static-assets/revslider/video-media/slider_1_layer.jpg'
   },
   contactPhone: '+591 71369822',
   featuresTitle: 'UN ECOSISTEMA DE POSIBILIDADES, UN MUNDO DE OPORTUNIDADES PARA TU NEGOCIO',
@@ -46,35 +46,35 @@ const fallbackData: HomepageData = {
       id: 'oficinas',
       title: 'OFICINAS',
       description: 'En venta y alquiler',
-      image: '/uploads/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg',
+      image: '/static-assets/elementor/thumbs/oficinam1-qubpyhacvcdu7b4d9f6lkfcw815jlau932kh7qgsc0.jpg',
       href: '/oficinas'
     },
     {
       id: 'centro-de-negocios',
       title: 'CENTRO DE NEGOCIOS',
       description: 'Eventos Corporativos',
-      image: '/uploads/2024/09/oficina2.jpg',
+      image: '/static-assets/2024/09/oficina2.jpg',
       href: '/centro-de-negocios'
     },
     {
       id: 'hub-40',
       title: 'HUB 40',
       description: 'Co-Work',
-      image: '/uploads/2024/09/oficina3.jpg',
+      image: '/static-assets/2024/09/oficina3.jpg',
       href: '/hub-40'
     },
     {
       id: 'boca',
       title: 'BOCA MIXTURA',
       description: 'Boulevard Gastronómico',
-      image: '/uploads/2024/09/oficina4.jpg',
+      image: '/static-assets/2024/09/oficina4.jpg',
       href: '/boca'
     },
     {
       id: 'amenidades',
       title: 'AMENIDADES',
       description: 'Pensadas en vos',
-      image: '/uploads/2024/09/boutique.jpg',
+      image: '/static-assets/2024/09/boutique.jpg',
       href: '/amenidades'
     }
   ],
@@ -83,37 +83,37 @@ const fallbackData: HomepageData = {
       id: 'leed',
       title: 'CERTIFICACIÓN LEED',
       description: 'Que garantiza contar con un edificio sostenible en el tiempo.',
-      icon: '/uploads/2024/09/building-icono.png'
+      icon: '/static-assets/2024/09/building-icono.png'
     },
     {
       id: 'seguro',
       title: 'AMBIENTE SEGURO',
       description: 'Seguridad proactiva y sustentada por tecnología avanzada.',
-      icon: '/uploads/2024/09/ambienteok.png'
+      icon: '/static-assets/2024/09/ambienteok.png'
     },
     {
       id: 'climatizacion',
       title: 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE',
       description: 'Esta tecnología permite generar un ahorro aproximado de 30% en el consumo eléctrico.',
-      icon: '/uploads/2024/09/ico3.png'
+      icon: '/static-assets/2024/09/ico3.png'
     },
     {
       id: 'aire-exterior',
       title: 'SISTEMA DE AIRE EXTERIOR',
       description: 'Necesario para la renovación de oxígeno de las oficinas, será suministrado y filtrado por medio de ventiladores de inyección de aire.',
-      icon: '/uploads/2024/09/ico4.png'
+      icon: '/static-assets/2024/09/ico4.png'
     },
     {
       id: 'muro-cortina',
       title: 'MURO CORTINA',
       description: 'Paneles de doble vidrio con cámara de aire por medio, para disminuir el ingreso del sol y optimizar el uso energético.',
-      icon: '/uploads/2024/09/ico5.png'
+      icon: '/static-assets/2024/09/ico5.png'
     },
     {
       id: 'ascensores',
       title: '16 ASCENSORES',
       description: 'Los más rápidos del país.',
-      icon: '/uploads/2024/09/icoi6.png'
+      icon: '/static-assets/2024/09/icoi6.png'
     }
   ]
 }
@@ -184,7 +184,7 @@ export default function HomepageContent() {
           
           <div className="homepage-content__contact">
             <img 
-              src="/uploads/2024/09/choice-phn-icon.png" 
+              src="/static-assets/2024/09/choice-phn-icon.png" 
               alt="Phone" 
               className="homepage-content__contact-icon"
             />

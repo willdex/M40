@@ -13,7 +13,7 @@ export default function HomePhoneCTA({
     <section className="home-phone-cta">
       <div className="home-phone-cta__container">
         <div className="home-phone-cta__icon">
-          <img src="/uploads/2024/09/choice-phn-icon.png" alt="Phone" />
+          <img src="/static-assets/2024/09/choice-phn-icon.png" alt="Phone" />
         </div>
         <div className="home-phone-cta__content">
           <h3 className="home-phone-cta__title">{title}</h3>

@@ -14,7 +14,7 @@ const rooms = [
       'Fotocopiadora',
       'Autoservicio permanente de cafetería'
     ],
-    image: '/uploads/2024/09/ssd-2048x1315.png',
+    image: '/static-assets/2024/09/ssd-2048x1315.png',
     imageAlt: 'Sala de Reunión Tujuré',
     reverse: true
   },
@@ -28,7 +28,7 @@ const rooms = [
       'Fotocopiadora',
       'Autoservicio permanente de cafetería'
     ],
-    image: '/uploads/2024/09/oficineitor3-2048x1395.png',
+    image: '/static-assets/2024/09/oficineitor3-2048x1395.png',
     imageAlt: 'Sala de Reunión Toledo'
   },
   {
@@ -41,7 +41,7 @@ const rooms = [
       'Fotocopiadora',
       'Autoservicio permanente de cafetería'
     ],
-    image: '/uploads/2024/09/trinidad.png',
+    image: '/static-assets/2024/09/trinidad.png',
     imageAlt: 'Sala de Reunión Trinidad',
     reverse: true
   }
@@ -54,7 +54,7 @@ export default function CentroDeNegociosPage() {
 
       <main id="mid">
         <PageHero
-          image="/uploads/2024/09/negocio-hero.png"
+          image="/static-assets/2024/09/negocio-hero.png"
           title="Centro de Negocios"
           overlayEnabled={true}
           overlayOpacity={0.4}
@@ -63,7 +63,7 @@ export default function CentroDeNegociosPage() {
         <ContentWithImage
           title="Salas de Reuniones"
           text="Desde USD. 30 por hora:"
-          image="/uploads/2024/09/reuniion1-2048x1315.jpg"
+          image="/static-assets/2024/09/reuniion1-2048x1315.jpg"
           imageAlt="Salas de Reuniones"
           features={[
             { text: 'Capacitaciones' },
@@ -87,7 +87,7 @@ export default function CentroDeNegociosPage() {
         <ContentWithImage
           title="Salón Auditorio"
           text=""
-          image="/uploads/2024/09/auditorio.jpg"
+          image="/static-assets/2024/09/auditorio.jpg"
           imageAlt="Salón Auditorio"
           features={[
             { text: 'Capacidad para 80 personas' },

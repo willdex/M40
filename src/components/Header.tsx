@@ -22,7 +22,7 @@ export default function Header() {
       <div className="m40-header-inner">
         <Link href="/" className="m40-logo">
           <Image 
-            src="/uploads/2024/09/LOGOoficial-300x257-1.png"
+            src="/static-assets/2024/09/LOGOoficial-300x257-1.png"
             alt="Manzana40 Logo"
             width={180}
             height={154}

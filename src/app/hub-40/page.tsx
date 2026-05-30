@@ -4,12 +4,12 @@ import PageHero from '@/components/PageHero'
 import ContentWithImage from '@/components/ContentWithImage'
 
 const benefits = [
-  { icon: '/uploads/2024/09/ICON1HUB.png', title: 'Accesos 24/7' },
-  { icon: '/uploads/2024/09/HUB403.png', title: 'Ingreso seguro' },
-  { icon: '/uploads/2024/09/HUB404.png', title: 'Cafeteria' },
-  { icon: '/uploads/2024/09/HUB4000.png', title: 'Salas de reuniones' },
-  { icon: '/uploads/2024/09/HUB40032.png', title: 'Impresiones disponibles' },
-  { icon: '/uploads/2024/09/HUB405.png', title: 'WiFi ilimitado' }
+  { icon: '/static-assets/2024/09/ICON1HUB.png', title: 'Accesos 24/7' },
+  { icon: '/static-assets/2024/09/HUB403.png', title: 'Ingreso seguro' },
+  { icon: '/static-assets/2024/09/HUB404.png', title: 'Cafeteria' },
+  { icon: '/static-assets/2024/09/HUB4000.png', title: 'Salas de reuniones' },
+  { icon: '/static-assets/2024/09/HUB40032.png', title: 'Impresiones disponibles' },
+  { icon: '/static-assets/2024/09/HUB405.png', title: 'WiFi ilimitado' }
 ]
 
 const reasons = [
@@ -33,7 +33,7 @@ export default function Hub40Page() {
 
       <main id="mid">
         <PageHero
-          image="/uploads/2024/09/hub40-hero.jpg"
+          image="/static-assets/2024/09/hub40-hero.jpg"
           title="Hub 40"
           overlayEnabled={true}
           overlayOpacity={0.4}
@@ -42,7 +42,7 @@ export default function Hub40Page() {
         <section className="hub-why">
           <div className="hub-why__container">
             <div className="hub-why__image">
-              <img src="/uploads/2024/09/HUB401-2048x1153.png" alt="Hub 40" />
+              <img src="/static-assets/2024/09/HUB401-2048x1153.png" alt="Hub 40" />
             </div>
             <div className="hub-why__content">
               <h2 className="hub-why__title">¿POR QUÉ ELEGIRNOS?</h2>
@@ -81,7 +81,7 @@ export default function Hub40Page() {
           title="Sistema de Membresías"
           subtitle="únete"
           text="En nuestro cowork encontrarás una variedad de espacios adaptados a tus necesidades, desde escritorios compartidos hasta oficinas privadas. Contamos con cuatro membresías disponibles que incluyen:"
-          image="/uploads/2024/09/DSC08027.png"
+          image="/static-assets/2024/09/DSC08027.png"
           imageAlt="Hub 40 Cowork"
           features={membershipFeatures.map(f => ({ text: f }))}
           ctaText="Cotiza Aquí"

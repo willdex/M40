@@ -97,7 +97,7 @@ export default function AgendaTuVisitaPage() {
 
       <main id="mid">
         <PageHero
-          image="/uploads/2024/09/slidernosotros.jpg"
+          image="/static-assets/2024/09/slidernosotros.jpg"
           title="Agenda tu Visita"
           overlayEnabled={true}
           overlayOpacity={0.5}
