@@ -127,8 +127,9 @@
     padding: 10px 0;
   }
 
-  /* Override column gap default padding for amenities */
-  .elementor-54 .elementor-element.elementor-element-65a4458b .elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+  /* Override column gap default padding for inner amenity rows */
+  .elementor-54 .elementor-element.elementor-element-338adee1 > .elementor-container > .elementor-column > .elementor-element-populated,
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf > .elementor-container > .elementor-column > .elementor-element-populated {
     padding: 5px;
   }
 
@@ -334,8 +335,9 @@
     padding: 8px 0 0 0;
   }
 
-  /* Override column gap default padding for amenities */
-  .elementor-54 .elementor-element.elementor-element-65a4458b .elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+  /* Override column gap default padding for inner amenity rows */
+  .elementor-54 .elementor-element.elementor-element-338adee1 > .elementor-container > .elementor-column > .elementor-element-populated,
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf > .elementor-container > .elementor-column > .elementor-element-populated {
     padding: 4px !important;
   }
 
