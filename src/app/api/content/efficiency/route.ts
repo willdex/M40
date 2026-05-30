@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
 
 export async function GET() {
   try {
-    const items = await prisma.efficiencyItem.findMany({
+    const items = await getPrisma().efficiencyItem.findMany({
       where: { active: true },
       orderBy: { order: 'asc' }
     })
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const { title, shortDesc, detailDesc, image, icon, ctaText, ctaLink, order, active } = body
 
-    const item = await prisma.efficiencyItem.create({
+    const item = await getPrisma().efficiencyItem.create({
       data: {
         title,
         shortDesc: shortDesc || '',
@@ -48,7 +48,7 @@ export async function PUT(request: Request) {
     const body = await request.json()
     const { id, title, shortDesc, detailDesc, image, icon, ctaText, ctaLink, order, active } = body
 
-    const item = await prisma.efficiencyItem.update({
+    const item = await getPrisma().efficiencyItem.update({
       where: { id },
       data: {
         title,
@@ -79,7 +79,7 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: 'ID required' }, { status: 400 })
     }
 
-    await prisma.efficiencyItem.delete({ where: { id } })
+    await getPrisma().efficiencyItem.delete({ where: { id } })
 
     return NextResponse.json({ success: true })
   } catch (error) {

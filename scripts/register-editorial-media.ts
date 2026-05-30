@@ -1,4 +1,4 @@
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 const EDITORIAL_IMAGES = [
   { url: '/uploads/2024/09/boca22.jpg', name: 'boca22.jpg' },
@@ -8,6 +8,7 @@ const EDITORIAL_IMAGES = [
 ]
 
 async function registerEditorialImages() {
+  const prisma = getPrisma()
   console.log('Registering editorial images in Media database...')
 
   for (const img of EDITORIAL_IMAGES) {
@@ -38,4 +39,4 @@ async function registerEditorialImages() {
 
 registerEditorialImages()
   .catch(console.error)
-  .finally(() => prisma.$disconnect())
+  .finally(() => getPrisma().$disconnect())

@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
 
 export async function GET() {
   try {
-    const amenities = await prisma.amenity.findMany({ orderBy: { order: 'asc' } })
+    const amenities = await getPrisma().amenity.findMany({ orderBy: { order: 'asc' } })
     return NextResponse.json(amenities)
   } catch (error) {
     console.error('Amenities fetch error:', error)
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const { title, description, icon, order = 0, active = true } = body
 
-    const amenity = await prisma.amenity.create({
+    const amenity = await getPrisma().amenity.create({
       data: { title, description, icon, order, active }
     })
 
@@ -35,7 +35,7 @@ export async function PUT(request: Request) {
     const body = await request.json()
     const { id, title, description, icon, order, active } = body
 
-    const amenity = await prisma.amenity.update({
+    const amenity = await getPrisma().amenity.update({
       where: { id },
       data: { title, description, icon, order, active }
     })
@@ -56,7 +56,7 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: 'ID required' }, { status: 400 })
     }
 
-    await prisma.amenity.delete({ where: { id } })
+    await getPrisma().amenity.delete({ where: { id } })
 
     return NextResponse.json({ success: true })
   } catch (error) {

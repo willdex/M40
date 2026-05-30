@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { writeFile, mkdir, unlink } from 'fs/promises'
 import { existsSync } from 'fs'
 import path from 'path'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -66,7 +66,7 @@ export async function POST(request: Request) {
 
     const publicUrl = `/uploads/${category}/${fileName}`
 
-    const media = await prisma.media.create({
+    const media = await getPrisma().media.create({
       data: {
         filename: fileName,
         originalName: file.name,
@@ -110,7 +110,7 @@ export async function GET(request: Request) {
       ]
     }
 
-    const media = await prisma.media.findMany({
+    const media = await getPrisma().media.findMany({
       where,
       orderBy: { createdAt: 'desc' },
       take: 50
@@ -135,9 +135,9 @@ export async function DELETE(request: Request) {
 
     let media
     if (id) {
-      media = await prisma.media.findUnique({ where: { id } })
+      media = await getPrisma().media.findUnique({ where: { id } })
     } else {
-      media = await prisma.media.findFirst({ where: { url: url! } })
+      media = await getPrisma().media.findFirst({ where: { url: url! } })
     }
 
     if (media) {
@@ -145,7 +145,7 @@ export async function DELETE(request: Request) {
       if (existsSync(filePath)) {
         await unlink(filePath)
       }
-      await prisma.media.delete({ where: { id: media.id } })
+      await getPrisma().media.delete({ where: { id: media.id } })
     } else if (url) {
       const filePath = path.join(process.cwd(), 'public', url)
       if (existsSync(filePath)) {
@@ -169,7 +169,7 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ error: 'ID required' }, { status: 400 })
     }
 
-    const media = await prisma.media.update({
+    const media = await getPrisma().media.update({
       where: { id },
       data: { alt }
     })

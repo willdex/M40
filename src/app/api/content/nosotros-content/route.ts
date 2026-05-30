@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -11,11 +11,11 @@ export async function GET(request: Request) {
 
     if (page === 'nosotros') {
       const [contentBlocks, features] = await Promise.all([
-        prisma.contentBlock.findMany({
+        getPrisma().contentBlock.findMany({
           where: { page: 'nosotros', active: true },
           orderBy: { order: 'asc' }
         }),
-        prisma.feature.findMany({
+        getPrisma().feature.findMany({
           where: { active: true },
           orderBy: { order: 'asc' }
         })
@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
     if (page === 'nosotros' && type === 'contentBlock') {
       const { title, content, image, imageAlt, reverse, order } = data
-      const block = await prisma.contentBlock.create({
+      const block = await getPrisma().contentBlock.create({
         data: {
           page: 'nosotros',
           title,
@@ -54,7 +54,7 @@ export async function POST(request: Request) {
 
     if (page === 'nosotros' && type === 'feature') {
       const { sectionTitle, icon, title, description, order } = data
-      const feature = await prisma.feature.create({
+      const feature = await getPrisma().feature.create({
         data: {
           sectionTitle: sectionTitle || null,
           icon,
@@ -81,7 +81,7 @@ export async function PUT(request: Request) {
 
     if (type === 'contentBlock') {
       const { id, title, content, image, imageAlt, reverse, order, active } = data
-      const block = await prisma.contentBlock.update({
+      const block = await getPrisma().contentBlock.update({
         where: { id },
         data: { title, content, image, imageAlt, reverse, order, active }
       })
@@ -90,7 +90,7 @@ export async function PUT(request: Request) {
 
     if (type === 'feature') {
       const { id, sectionTitle, icon, title, description, order, active } = data
-      const feature = await prisma.feature.update({
+      const feature = await getPrisma().feature.update({
         where: { id },
         data: { sectionTitle, icon, title, description, order, active }
       })
@@ -115,9 +115,9 @@ export async function DELETE(request: Request) {
     }
 
     if (type === 'contentBlock') {
-      await prisma.contentBlock.delete({ where: { id } })
+      await getPrisma().contentBlock.delete({ where: { id } })
     } else if (type === 'feature') {
-      await prisma.feature.delete({ where: { id } })
+      await getPrisma().feature.delete({ where: { id } })
     } else {
       return NextResponse.json({ error: 'Invalid type' }, { status: 400 })
     }

@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
 
 export async function GET() {
   try {
-    const sections = await prisma.homepageEditorial.findMany({
+    const sections = await getPrisma().homepageEditorial.findMany({
       orderBy: { order: 'asc' }
     })
     return NextResponse.json(sections)
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const { type, title, subtitle, paragraph, image, images, active = true, order = 0 } = body
 
-    const section = await prisma.homepageEditorial.create({
+    const section = await getPrisma().homepageEditorial.create({
       data: { type, title, subtitle, paragraph, image, images, active, order }
     })
 
@@ -41,7 +41,7 @@ export async function PUT(request: Request) {
       return NextResponse.json({ error: 'ID required' }, { status: 400 })
     }
 
-    const section = await prisma.homepageEditorial.update({
+    const section = await getPrisma().homepageEditorial.update({
       where: { id },
       data: { type, title, subtitle, paragraph, image, images, active, order }
     })
@@ -62,7 +62,7 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: 'ID required' }, { status: 400 })
     }
 
-    await prisma.homepageEditorial.delete({ where: { id } })
+    await getPrisma().homepageEditorial.delete({ where: { id } })
 
     return NextResponse.json({ success: true })
   } catch (error) {

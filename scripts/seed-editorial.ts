@@ -1,6 +1,7 @@
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 async function seedEditorialSections() {
+  const prisma = getPrisma()
   console.log('Seeding homepage editorial sections...')
 
   const existingSections = await prisma.homepageEditorial.findMany()
@@ -53,4 +54,4 @@ async function seedEditorialSections() {
 
 seedEditorialSections()
   .catch(console.error)
-  .finally(() => prisma.$disconnect())
+  .finally(() => getPrisma().$disconnect())

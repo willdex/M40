@@ -1,6 +1,7 @@
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 async function checkEditorialSections() {
+  const prisma = getPrisma()
   const sections = await prisma.homepageEditorial.findMany()
   console.log('Editorial sections in DB:')
   console.log(JSON.stringify(sections, null, 2))
@@ -8,4 +9,4 @@ async function checkEditorialSections() {
 
 checkEditorialSections()
   .catch(console.error)
-  .finally(() => prisma.$disconnect())
+  .finally(() => getPrisma().$disconnect())

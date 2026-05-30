@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -7,10 +7,10 @@ export const runtime = 'nodejs'
 export async function GET() {
   try {
     const [hero, sections] = await Promise.all([
-      prisma.hero.findFirst({
+      getPrisma().hero.findFirst({
         where: { page: 'oficinas', active: true }
       }),
-      prisma.contentBlock.findMany({
+      getPrisma().contentBlock.findMany({
         where: { page: 'oficinas', active: true },
         orderBy: { order: 'asc' }
       })
@@ -48,7 +48,7 @@ export async function PUT(request: Request) {
     const { hero, sections } = await request.json()
 
     if (hero) {
-      await prisma.hero.upsert({
+      await getPrisma().hero.upsert({
         where: { id: hero.id || 'oficinas-hero' },
         update: {
           page: 'oficinas',
@@ -69,7 +69,7 @@ export async function PUT(request: Request) {
     if (sections && Array.isArray(sections)) {
       for (const section of sections) {
         if (section.id) {
-          await prisma.contentBlock.updateMany({
+          await getPrisma().contentBlock.updateMany({
             where: { id: section.id, page: 'oficinas' },
             data: {
               title: section.title,
@@ -82,7 +82,7 @@ export async function PUT(request: Request) {
             }
           })
         } else if (section.title) {
-          await prisma.contentBlock.create({
+          await getPrisma().contentBlock.create({
             data: {
               page: 'oficinas',
               sectionId: section.id || null,

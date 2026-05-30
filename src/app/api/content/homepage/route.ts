@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
@@ -12,7 +12,7 @@ export async function PUT(request: Request) {
       return NextResponse.json({ error: 'Key and value required' }, { status: 400 })
     }
 
-    await prisma.siteMeta.upsert({
+    await getPrisma().siteMeta.upsert({
       where: { key },
       update: { value },
       create: { key, value }
@@ -28,17 +28,17 @@ export async function PUT(request: Request) {
 export async function GET() {
   try {
     const [meta, services, amenities, footer, heroes] = await Promise.all([
-      prisma.siteMeta.findMany(),
-      prisma.service.findMany({ 
+      getPrisma().siteMeta.findMany(),
+      getPrisma().service.findMany({ 
         where: { active: true },
         orderBy: { order: 'asc' } 
       }),
-      prisma.amenity.findMany({ 
+      getPrisma().amenity.findMany({ 
         where: { active: true },
         orderBy: { order: 'asc' } 
       }),
-      prisma.footerContent.findFirst(),
-      prisma.hero.findMany({ 
+      getPrisma().footerContent.findFirst(),
+      getPrisma().hero.findMany({ 
         where: { page: 'homepage', active: true },
         orderBy: { order: 'asc' },
         take: 1

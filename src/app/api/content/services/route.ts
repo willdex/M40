@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server'
-import prisma from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'
 
 export async function GET() {
   try {
-    const services = await prisma.service.findMany({ orderBy: { order: 'asc' } })
+    const services = await getPrisma().service.findMany({ orderBy: { order: 'asc' } })
     return NextResponse.json(services)
   } catch (error) {
     console.error('Services fetch error:', error)
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const { title, description, image, href, order = 0, active = true } = body
 
-    const service = await prisma.service.create({
+    const service = await getPrisma().service.create({
       data: { title, description, image, href, order, active }
     })
 
@@ -35,7 +35,7 @@ export async function PUT(request: Request) {
     const body = await request.json()
     const { id, title, description, image, href, order, active } = body
 
-    const service = await prisma.service.update({
+    const service = await getPrisma().service.update({
       where: { id },
       data: { title, description, image, href, order, active }
     })
@@ -56,7 +56,7 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: 'ID required' }, { status: 400 })
     }
 
-    await prisma.service.delete({ where: { id } })
+    await getPrisma().service.delete({ where: { id } })
 
     return NextResponse.json({ success: true })
   } catch (error) {
