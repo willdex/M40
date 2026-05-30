@@ -44,7 +44,7 @@ const STATIC_FALLBACK = {
       title: 'SISTEMA DE CLIMATIZACIÓN INTELIGENTE',
       shortDesc: 'Una solución avanzada que optimiza el control de la temperatura',
       detailDesc: 'Sistema de climatización de última generación que permite un control preciso de la temperatura en todas las áreas del edificio, optimizando el consumo energético mientras mantiene un ambiente laboral confortable.',
-      image: '/static-assets/2024/09/climatizacion-grande.jpg',
+      image: '/static-assets/nosotros/Ventil-768x768-1-1780026164909.png',
       ctaText: 'Ver más',
       ctaLink: ''
     },
@@ -54,7 +54,7 @@ const STATIC_FALLBACK = {
       title: 'SISTEMA DE ENFRIAMIENTO DE SALAS DE COMPUTACIÓN',
       shortDesc: 'Es esencial para mantener la temperatura óptima de estas áreas críticas',
       detailDesc: 'Sistemas especializados de enfriamiento diseñados específicamente para salas de servidores y computación, garantizando que la temperatura se mantenga en niveles óptimos para el funcionamiento de equipos electrónicos sensibles.',
-      image: '/static-assets/2024/09/enfriamiento-grande.jpg',
+      image: '/static-assets/nosotros/enfriamentocomputacion-1780028074289.jpg',
       ctaText: 'Ver más',
       ctaLink: ''
     },
@@ -64,7 +64,7 @@ const STATIC_FALLBACK = {
       title: 'SISTEMAS DE AIRE EXTERIOR',
       shortDesc: 'Es una parte vital de la ventilación y climatización',
       detailDesc: 'Sistema de ventilación que garantiza la renovación constante del aire interior con aire exterior filtrado, mejorando la calidad del ambiente laboral y reduciendo la concentración de contaminantes.',
-      image: '/static-assets/2024/09/aire-exterior-grande.jpg',
+      image: '/static-assets/nosotros/SISTEMA-DE-AIRE-EXTERIOR-jpg-1780028137095.jpeg',
       ctaText: 'Ver más',
       ctaLink: ''
     },
@@ -74,7 +74,7 @@ const STATIC_FALLBACK = {
       title: 'FACHADA VENTILADA',
       shortDesc: 'Se ha diseñado un sistema de revestimiento exterior',
       detailDesc: 'Fachada ventilada con paneles de doble vidrio que proporciona aislamiento térmico superior, reduciendo significativamente los costos de climatización y proporcionando un aspecto moderno y elegante.',
-      image: '/static-assets/2024/09/fachada-grande.jpg',
+      image: '/static-assets/nosotros/FACHADA-VENTILADA-jpg-1780028167909.jpeg',
       ctaText: 'Ver más',
       ctaLink: ''
     },
@@ -84,7 +84,7 @@ const STATIC_FALLBACK = {
       title: 'SISTEMA DE CONTROL CENTRALIZADO',
       shortDesc: 'Coordina y gestiona diversas funciones y sistemas dentro de la edificación',
       detailDesc: 'Sistema BMS (Building Management System) que permite el control y monitoreo centralizado de todos los sistemas del edificio, desde climatización hasta iluminación y seguridad.',
-      image: '/static-assets/2024/09/control-grande.jpg',
+      image: '/static-assets/nosotros/Controlcentr-1780028205618.jpg',
       ctaText: 'Ver más',
       ctaLink: ''
     },
@@ -94,7 +94,7 @@ const STATIC_FALLBACK = {
       title: 'CANALIZACIÓN DE AGUAS DE LLUVIA',
       shortDesc: 'Un sistema de drenaje diseñado para capturar y dirigir el agua de lluvia lejos de la estructura',
       detailDesc: 'Sistema integral de drenaje que captura y dirige el agua de lluvia lejos de la estructura, previniendo filtraciones y daños por humedad mientras contribuye a la sostenibilidad ambiental.',
-      image: '/static-assets/2024/09/drenaje-grande.jpg',
+      image: '/static-assets/nosotros/CANALIZACION-DE-AGUA-jpg-1780028244834.jpeg',
       ctaText: 'Ver más',
       ctaLink: ''
     }
