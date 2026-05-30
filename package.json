@@ -4,7 +4,7 @@
   "description": "Manzana40 Website - Next.js Migration",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "db:seed": "npx prisma db seed",
