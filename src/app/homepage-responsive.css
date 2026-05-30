@@ -148,17 +148,21 @@
     margin: 0;
   }
 
+  .elementor-54 .elementor-element.elementor-element-ecd4ddf {
+    margin-bottom: 8px;
+  }
+
   /* Make columns stack on mobile with equal gaps */
   .elementor-54 .elementor-element.elementor-element-338adee1 > .elementor-container,
   .elementor-54 .elementor-element.elementor-element-ecd4ddf > .elementor-container {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
   }
 
   /* Reduce gap between the two amenity rows (338adee1 and ecd4ddf) */
   .elementor-54 .elementor-element.elementor-element-65a4458b > .elementor-container {
-    gap: 4px;
+    gap: 6px;
   }
 
   .elementor-54 .elementor-element.elementor-element-338adee1 .elementor-column,
@@ -222,14 +226,14 @@
   /* ===== YELLOW BANNER (471822f6) ===== */
   .elementor-54 .elementor-element.elementor-element-471822f6 {
     padding: 30px 0 !important;
-    min-height: auto !important;
+    min-height: 250px !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
   }
 
   .elementor-54 .elementor-element.elementor-element-471822f6 > .elementor-container {
-    min-height: auto !important;
+    min-height: 250px !important;
   }
 
   /* ===== INVESTMENT SECTION (1796b641) ===== */
