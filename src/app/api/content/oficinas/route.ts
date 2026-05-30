@@ -18,7 +18,7 @@ export async function GET() {
 
     const result = {
       hero: {
-        image: hero?.posterSrc || hero?.videoSrc || '/uploads/2024/09/oficinas-hero.jpg',
+        image: hero?.posterSrc || hero?.videoSrc || '/static-assets/2024/09/oficinas-hero.jpg',
         title: hero?.title || 'OFICINAS'
       },
       sections: sections.map(s => ({

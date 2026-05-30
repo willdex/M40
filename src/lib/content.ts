@@ -67,6 +67,14 @@ export interface MetaContent {
 export interface SiteContent {
   sliders?: Slider[]
   homepage: HomePageContent
+  videoSection1: {
+    url: string
+    poster: string
+  }
+  videoSection2: {
+    url: string
+    poster: string
+  }
   services: Service[]
   amenities: Amenity[]
   footer: FooterContent

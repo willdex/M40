@@ -3,6 +3,8 @@ import Footer from '@/components/Footer'
 import ServicesSection from '@/components/ServicesSection'
 import HomepageEditorials from '@/components/HomepageEditorials'
 import HomePhoneCTA from '@/components/HomePhoneCTA'
+import VideoOverlayClient from '@/components/VideoOverlayClient'
+import YouTubeEmbed from '@/components/YouTubeEmbed'
 import { getHomepageContent } from '@/lib/db-content'
 import type { SiteContent } from '@/lib/content'
 
@@ -32,7 +34,9 @@ const STATIC_FALLBACK: SiteContent = {
     { id: 'ascensores', icon: '/static-assets/2024/09/icoi6.png', title: '16 ASCENSORES', description: 'Los más rápidos del país.' }
   ],
   footer: { aboutTitle: 'Quienes Somos', aboutText: 'Somos el epicentro de la innovación y el progreso.', servicesTitle: 'Servicios', contactTitle: 'Contacto', address: 'Av. San Martín, Calle J.', phone: '+591 713-69822', email: 'info@manzana40.com', facebook: 'https://www.facebook.com/M40PlazaEmpresarial', instagram: 'https://www.instagram.com/manzana40.bo/' },
-  meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: '+591 71369822' }
+  meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: '+591 71369822' },
+videoSection1: { url: '/static-assets/videos/hyperlapse.mp4', poster: '/static-assets/2024/09/hyperportada.jpg' },
+    videoSection2: { url: 'https://www.youtube.com/embed/pLA2_VdjU7g', poster: '/static-assets/2024/09/hyperportada.jpg' }
 }
 
 async function getContent(): Promise<SiteContent> {
@@ -48,6 +52,14 @@ async function getContent(): Promise<SiteContent> {
         contactPhone: dbContent.contactPhone || STATIC_FALLBACK.homepage.contactPhone,
         featuresTitle: dbContent.featuresTitle || STATIC_FALLBACK.homepage.featuresTitle,
         amenitiesTitle: dbContent.amenitiesTitle || STATIC_FALLBACK.homepage.amenitiesTitle
+      },
+      videoSection1: {
+        url: dbContent.videoSection1?.url || STATIC_FALLBACK.videoSection1.url,
+        poster: dbContent.videoSection1?.poster || STATIC_FALLBACK.videoSection1.poster
+      },
+      videoSection2: {
+        url: dbContent.videoSection2?.url || STATIC_FALLBACK.videoSection2.url,
+        poster: dbContent.videoSection2?.poster || STATIC_FALLBACK.videoSection2.poster
       },
       services: dbContent.services?.length ? dbContent.services : STATIC_FALLBACK.services,
       amenities: dbContent.amenities?.length ? dbContent.amenities : STATIC_FALLBACK.amenities,
@@ -72,7 +84,7 @@ async function getContent(): Promise<SiteContent> {
 
 export default async function HomePage() {
   const content = await getContent()
-  const { homepage, services, amenities, sliders } = content
+  const { homepage, services, amenities, sliders, videoSection1, videoSection2 } = content
 
   return (
     <div className="whole-layout">
@@ -137,14 +149,10 @@ export default async function HomePage() {
                   </div>
                   <div className="elementor-element elementor-element-9898042 elementor-widget elementor-widget-video" data-id="9898042" data-element_type="widget" data-e-type="widget" data-widget_type="video.default">
                     <div className="elementor-widget-container">
-                      <div className="e-hosted-video elementor-wrapper elementor-open-inline">
-                        <video className="elementor-video" src={homepage.mainVideo.src} controls preload="metadata" controlsList="nodownload"></video>
-                        <div className="elementor-custom-embed-image-overlay" style={{ backgroundImage: `url(${homepage.mainVideo.poster})` }}>
-                          <div className="elementor-custom-embed-play" role="button" aria-label="Reproducir vídeo" tabIndex={0}>
-                            <i aria-hidden="true" className="eicon-play"></i>
-                          </div>
-                        </div>
-                      </div>
+                      <VideoOverlayClient
+                        src={videoSection1.url}
+                        poster={videoSection1.poster || homepage.mainVideo.poster}
+                      />
                     </div>
                   </div>
                 </div>
@@ -446,14 +454,10 @@ export default async function HomePage() {
                         <div className="elementor-widget-wrap elementor-element-populated">
                           <div className="elementor-element elementor-element-f2895a8 elementor-widget elementor-widget-video" data-id="f2895a8" data-element_type="widget" data-e-type="widget" data-widget_type="video.default">
                             <div className="elementor-widget-container">
-                              <div className="elementor-wrapper elementor-open-inline">
-                                <div className="elementor-video"></div>
-                                <div className="elementor-custom-embed-image-overlay" style={{ backgroundImage: 'url(/static-assets/2024/09/hyperportada.jpg)' }}>
-                                  <div className="elementor-custom-embed-play" role="button" aria-label="Reproducir vídeo" tabIndex={0}>
-                                    <i aria-hidden="true" className="eicon-play"></i>
-                                  </div>
-                                </div>
-                              </div>
+                              <YouTubeEmbed
+                                url={videoSection2.url}
+                                poster={videoSection2.poster || '/static-assets/2024/09/hyperportada.jpg'}
+                              />
                             </div>
                           </div>
                         </div>

@@ -36,7 +36,7 @@ export async function GET() {
         image: hero.videoSrc || '',
         alt: hero.alt || 'Nosotros'
       } : {
-        image: metaMap.nosotros_heroImage || '/uploads/2024/09/slidernosotros.jpg',
+        image: metaMap.nosotros_heroImage || '/static-assets/2024/09/slidernosotros.jpg',
         alt: metaMap.nosotros_heroAlt || 'Nosotros'
       },
       contentBlocks: contentBlocks.map(block => ({

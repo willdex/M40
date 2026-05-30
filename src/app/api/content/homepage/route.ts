@@ -67,11 +67,10 @@ export async function GET() {
       contactPhone: metaMap.homepage_contactPhone || '',
       featuresTitle: metaMap.homepage_featuresTitle || '',
       amenitiesTitle: metaMap.homepage_amenitiesTitle || '',
-      videoSection: {
-        title: metaMap.homepage_videoSectionTitle || '',
-        youtubeUrl: metaMap.homepage_videoSectionYoutube || '',
-        poster: metaMap.homepage_videoSectionPoster || ''
-      },
+      homepage_videoSection1_url: metaMap.homepage_videoSection1_url || '',
+      homepage_videoSection1_poster: metaMap.homepage_videoSection1_poster || '',
+      homepage_videoSection2_url: metaMap.homepage_videoSection2_url || '',
+      homepage_videoSection2_poster: metaMap.homepage_videoSection2_poster || '',
       services: services.map(s => ({
         id: s.id,
         title: s.title,
