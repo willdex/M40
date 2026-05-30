@@ -155,6 +155,14 @@ export function getDefaultContent(): SiteContent {
       siteName: 'Manzana40',
       description: 'La Plaza Empresarial más importante del país',
       phone: '+591 71369822'
+    },
+    videoSection1: {
+      url: '/static-assets/videos/hyperlapse.mp4',
+      poster: '/static-assets/2024/09/hyperportada.jpg'
+    },
+    videoSection2: {
+      url: 'https://www.youtube.com/embed/pLA2_VdjU7g',
+      poster: '/static-assets/2024/09/hyperportada.jpg'
     }
   }
 }
