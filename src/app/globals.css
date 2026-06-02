@@ -703,6 +703,14 @@ footer {
   .content-with-image__features {
     align-items: center;
   }
+
+  /* Reorder: text first, image second on mobile (internal pages only) */
+  .content-block__image { order: 2; }
+  .content-block__content { order: 1; }
+  .content-with-image__image { order: 2; }
+  .content-with-image__content { order: 1; }
+  .hub-why__image { order: 2; }
+  .hub-why__content { order: 1; }
 }
 
 /* Hub 40 Page */
