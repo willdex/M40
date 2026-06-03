@@ -124,7 +124,7 @@
   /* ===== AMENITIES SECTION (65a4458b) ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
     margin-top: 0;
-    padding: 0;
+    padding: 0 !important;
   }
 
   /* Control spacing via the populated wrapper (direct parent of headings + rows) */
