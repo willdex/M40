@@ -1376,7 +1376,11 @@ body{cursor:auto}
   }
 
   .homepage-editorial__image-wrapper {
-    order: -1;
+    order: 2;
+  }
+
+  .homepage-editorial__content {
+    order: 1;
   }
 
   .homepage-editorial__image {
