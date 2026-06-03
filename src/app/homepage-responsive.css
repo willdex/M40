@@ -127,11 +127,12 @@
     padding: 0;
   }
 
-  /* Make the section container a flex column to control gap between all child blocks uniformly */
-  .elementor-54 .elementor-element.elementor-element-65a4458b > .elementor-container {
+  /* Control spacing via the populated wrapper (direct parent of headings + rows) */
+  .elementor-54 .elementor-element.elementor-element-7be03aee > .elementor-widget-wrap.elementor-element-populated {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
   }
 
   /* Override column gap default padding for inner amenity rows */
@@ -270,11 +271,11 @@
   }
 
   .elementor-54 .elementor-element.elementor-element-83d6e3f {
-    order: 2;
+    order: 1;
   }
 
   .elementor-54 .elementor-element.elementor-element-ce5e5cf {
-    order: 1;
+    order: 2;
   }
 
   /* ===== NAVIGATION ===== */
@@ -358,8 +359,8 @@
     padding: 0 !important;
   }
 
-  .elementor-54 .elementor-element.elementor-element-65a4458b > .elementor-container {
-    gap: 10px;
+  .elementor-54 .elementor-element.elementor-element-7be03aee > .elementor-widget-wrap.elementor-element-populated {
+    gap: 15px;
   }
 
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {
