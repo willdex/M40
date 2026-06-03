@@ -55,11 +55,11 @@ async function getContent(): Promise<SiteContent> {
       },
       videoSection1: {
         url: dbContent.videoSection1?.url || STATIC_FALLBACK.videoSection1.url,
-        poster: dbContent.videoSection1?.poster || STATIC_FALLBACK.videoSection1.poster
+        poster: STATIC_FALLBACK.videoSection1.poster
       },
       videoSection2: {
         url: dbContent.videoSection2?.url || STATIC_FALLBACK.videoSection2.url,
-        poster: dbContent.videoSection2?.poster || STATIC_FALLBACK.videoSection2.poster
+        poster: STATIC_FALLBACK.videoSection2.poster
       },
       services: dbContent.services?.length ? dbContent.services : STATIC_FALLBACK.services,
       amenities: dbContent.amenities?.length ? dbContent.amenities : STATIC_FALLBACK.amenities,
