@@ -344,7 +344,7 @@ export default async function HomePage() {
                               <div className="elementor-button-wrapper">
                                 <a className="elementor-button elementor-button-link elementor-size-sm" href="https://api.whatsapp.com/send?phone=59171369822&text=Quiero%20m%C3%A1s%20informaci%C3%B3n">
                                   <span className="elementor-button-content-wrapper">
-                                    <span className="elementor-button-text">Más Información</span>
+                                    <span className="elementor-button-text">Más información</span>
                                   </span>
                                 </a>
                               </div>
@@ -378,7 +378,7 @@ export default async function HomePage() {
                               <div className="elementor-button-wrapper">
                                 <a className="elementor-button elementor-button-link elementor-size-sm" href="https://bit.ly/oficinasm40">
                                   <span className="elementor-button-content-wrapper">
-                                    <span className="elementor-button-text">Más Información</span>
+                                    <span className="elementor-button-text">Más información</span>
                                   </span>
                                 </a>
                               </div>
@@ -409,7 +409,7 @@ export default async function HomePage() {
                               <div className="elementor-button-wrapper">
                                 <a className="elementor-button elementor-button-link elementor-size-sm" href="https://bit.ly/oficinasm40">
                                   <span className="elementor-button-content-wrapper">
-                                    <span className="elementor-button-text">Más Información</span>
+                                    <span className="elementor-button-text">Más información</span>
                                   </span>
                                 </a>
                               </div>

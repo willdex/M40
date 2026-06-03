@@ -79,7 +79,6 @@ export default function Hub40Page() {
 
         <ContentWithImage
           title="Sistema de Membresías"
-          subtitle="únete"
           text="En nuestro cowork encontrarás una variedad de espacios adaptados a tus necesidades, desde escritorios compartidos hasta oficinas privadas. Contamos con cuatro membresías disponibles que incluyen:"
           image="/static-assets/2024/09/DSC08027.png"
           imageAlt="Hub 40 Cowork"

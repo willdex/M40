@@ -7,7 +7,7 @@ interface HomePhoneCTAProps {
 
 export default function HomePhoneCTA({
   phone = '+591 71369822',
-  title = 'Agenda tu Visita'
+  title = 'Agenda tu visita'
 }: HomePhoneCTAProps) {
   return (
     <section className="home-phone-cta">

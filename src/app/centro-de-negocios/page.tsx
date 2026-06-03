@@ -93,7 +93,7 @@ export default function CentroDeNegociosPage() {
             { text: 'Capacidad para 80 personas' },
             { text: 'Smart TV' },
             { text: 'Conexión inalámbrica para proyección' },
-            { text: 'Proyector Profesional' }
+            { text: 'Proyector profesional' }
           ]}
         />
       </main>
