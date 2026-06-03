@@ -54,11 +54,11 @@ async function getContent(): Promise<SiteContent> {
         amenitiesTitle: dbContent.amenitiesTitle || STATIC_FALLBACK.homepage.amenitiesTitle
       },
       videoSection1: {
-        url: dbContent.videoSection1?.url || STATIC_FALLBACK.videoSection1.url,
+        url: STATIC_FALLBACK.videoSection1.url,
         poster: STATIC_FALLBACK.videoSection1.poster
       },
       videoSection2: {
-        url: dbContent.videoSection2?.url || STATIC_FALLBACK.videoSection2.url,
+        url: STATIC_FALLBACK.videoSection2.url,
         poster: STATIC_FALLBACK.videoSection2.poster
       },
       services: dbContent.services?.length ? dbContent.services : STATIC_FALLBACK.services,
