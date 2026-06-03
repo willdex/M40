@@ -36,7 +36,7 @@ const STATIC_FALLBACK: SiteContent = {
   footer: { aboutTitle: 'Quienes Somos', aboutText: 'Somos el epicentro de la innovación y el progreso.', servicesTitle: 'Servicios', contactTitle: 'Contacto', address: 'Av. San Martín, Calle J.', phone: '+591 713-69822', email: 'info@manzana40.com', facebook: 'https://www.facebook.com/M40PlazaEmpresarial', instagram: 'https://www.instagram.com/manzana40.bo/' },
   meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: '+591 71369822' },
 videoSection1: { url: '/static-assets/videos/hyperlapse.mp4', poster: '/static-assets/2024/09/hyperportada.jpg' },
-    videoSection2: { url: 'https://www.youtube.com/embed/pLA2_VdjU7g', poster: '/static-assets/2024/09/hyperportada.jpg' }
+    videoSection2: { url: 'https://www.youtube.com/embed/pLA2_VdjU7g', poster: 'https://img.youtube.com/vi/pLA2_VdjU7g/maxresdefault.jpg' }
 }
 
 async function getContent(): Promise<SiteContent> {

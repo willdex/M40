@@ -121,6 +121,26 @@
     gap: 15px;
   }
 
+  /* Neutralize post-54a1d3.css margins/paddings on amenity cards */
+  .elementor-54 .elementor-element.elementor-element-251d3e4b > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-cca3426 > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-b16dfeb > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-6decf9e > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-fe2e502 > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-701f1ae > .elementor-widget-container {
+    margin: 0 !important;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-4628239b > .elementor-widget-container {
+    padding: 0 !important;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-4348e22f > .elementor-element-populated,
+  .elementor-54 .elementor-element.elementor-element-a15969c > .elementor-element-populated,
+  .elementor-54 .elementor-element.elementor-element-81860a3 > .elementor-element-populated {
+    margin: 0 !important;
+  }
+
   /* ===== AMENITIES SECTION (65a4458b) ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
     margin-top: 0;
@@ -352,6 +372,26 @@
 
   .homepage-community__grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Neutralize post-54a1d3.css margins/paddings on amenity cards */
+  .elementor-54 .elementor-element.elementor-element-251d3e4b > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-cca3426 > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-b16dfeb > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-6decf9e > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-fe2e502 > .elementor-widget-container,
+  .elementor-54 .elementor-element.elementor-element-701f1ae > .elementor-widget-container {
+    margin: 0 !important;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-4628239b > .elementor-widget-container {
+    padding: 0 !important;
+  }
+
+  .elementor-54 .elementor-element.elementor-element-4348e22f > .elementor-element-populated,
+  .elementor-54 .elementor-element.elementor-element-a15969c > .elementor-element-populated,
+  .elementor-54 .elementor-element.elementor-element-81860a3 > .elementor-element-populated {
+    margin: 0 !important;
   }
 
   /* ===== AMENITIES ===== */
