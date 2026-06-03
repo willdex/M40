@@ -45,11 +45,11 @@ export async function getHomepageContent() {
     amenitiesTitle: metaMap.homepage_amenitiesTitle || '',
     videoSection1: {
       url: metaMap.homepage_videoSection1_url || '/static-assets/videos/VideoHomeage.mp4',
-      poster: metaMap.homepage_videoSection1_poster || '/static-assets/revslider/video-media/slider_1_layer.jpg'
+      poster: metaMap.homepage_videoSection1_poster || ''
     },
     videoSection2: {
       url: metaMap.homepage_videoSection2_url || '',
-      poster: metaMap.homepage_videoSection2_poster || '/static-assets/2024/09/hyperportada.jpg'
+      poster: metaMap.homepage_videoSection2_poster || ''
     },
     services: services.map(s => ({
       id: s.id,
