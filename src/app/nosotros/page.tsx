@@ -18,7 +18,7 @@ const STATIC_FALLBACK = {
     {
       title: 'Edificación Sustentable',
       text: 'Manzana 40 es la primera edificación empresarial en Bolivia que cuenta con la certificación LEED (Leadership in Energy & Environmental Design), otorgada por el Consejo de la Construcción Verde de Estados Unidos (U.S. Green Building Council), que garantiza un edificio sostenible a lo largo del tiempo, ya que cumple con aspectos relacionados con altos estándares de eficiencia energética, mejora de la calidad ambiental interior, eficiencia en el consumo de agua, desarrollo sostenible de espacios libres y selección de materiales adecuados.',
-      image: '/static-assets/2024/09/nosotro2.png',
+      image: '/static-assets/2024/09/Led.jpg',
       imageAlt: 'Edificación Sustentable',
       reverse: true
     },
