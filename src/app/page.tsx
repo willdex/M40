@@ -35,8 +35,8 @@ const STATIC_FALLBACK: SiteContent = {
   ],
   footer: { aboutTitle: 'Quienes Somos', aboutText: 'Somos el epicentro de la innovación y el progreso.', servicesTitle: 'Servicios', contactTitle: 'Contacto', address: 'Av. San Martín, Calle J.', phone: '+591 713-69822', email: 'info@manzana40.com', facebook: 'https://www.facebook.com/M40PlazaEmpresarial', instagram: 'https://www.instagram.com/manzana40.bo/' },
   meta: { siteName: 'Manzana40', description: 'La Plaza Empresarial más importante del país', phone: '+591 71369822' },
-videoSection1: { url: '/static-assets/videos/hyperlapse.mp4', poster: '/static-assets/2024/09/manzn2.jpg' },
-    videoSection2: { url: 'https://www.youtube.com/embed/pLA2_VdjU7g', poster: 'https://img.youtube.com/vi/pLA2_VdjU7g/maxresdefault.jpg' }
+videoSection1: { url: 'https://www.youtube.com/embed/pLA2_VdjU7g', poster: 'https://img.youtube.com/vi/pLA2_VdjU7g/maxresdefault.jpg' },
+    videoSection2: { url: '/static-assets/videos/hyperlapse.mp4', poster: '/static-assets/2024/09/manzn2.jpg' }
 }
 
 async function getContent(): Promise<SiteContent> {
@@ -149,9 +149,9 @@ export default async function HomePage() {
                   </div>
                   <div className="elementor-element elementor-element-9898042 elementor-widget elementor-widget-video" data-id="9898042" data-element_type="widget" data-e-type="widget" data-widget_type="video.default">
                     <div className="elementor-widget-container">
-                      <VideoOverlayClient
-                        src={videoSection1.url}
-                        poster={videoSection1.poster!}
+                      <YouTubeEmbed
+                        url={videoSection1.url}
+                        poster={videoSection1.poster || ''}
                       />
                     </div>
                   </div>
@@ -454,9 +454,9 @@ export default async function HomePage() {
                         <div className="elementor-widget-wrap elementor-element-populated">
                           <div className="elementor-element elementor-element-f2895a8 elementor-widget elementor-widget-video" data-id="f2895a8" data-element_type="widget" data-e-type="widget" data-widget_type="video.default">
                             <div className="elementor-widget-container">
-                              <YouTubeEmbed
-                                url={videoSection2.url}
-                                poster={videoSection2.poster || ''}
+                              <VideoOverlayClient
+                                src={videoSection2.url}
+                                poster={videoSection2.poster!}
                               />
                             </div>
                           </div>
