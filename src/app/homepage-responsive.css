@@ -145,6 +145,7 @@
   .elementor-54 .elementor-element.elementor-element-65a4458b {
     margin-top: 0;
     padding: 0 !important;
+    padding-bottom: 40px !important;
   }
 
   /* Control spacing via the populated wrapper (direct parent of headings + rows) */
@@ -152,7 +153,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
   }
 
   /* Override column gap default padding for inner amenity rows */
@@ -397,10 +398,11 @@
   /* ===== AMENITIES ===== */
   .elementor-54 .elementor-element.elementor-element-65a4458b {
     padding: 0 !important;
+    padding-bottom: 20px !important;
   }
 
   .elementor-54 .elementor-element.elementor-element-7be03aee > .elementor-widget-wrap.elementor-element-populated {
-    gap: 15px;
+    gap: 8px;
   }
 
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {
