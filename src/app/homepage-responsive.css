@@ -194,7 +194,7 @@
   /* Amenity rows - ensure consistent spacing on mobile */
   .elementor-54 .elementor-element.elementor-element-338adee1,
   .elementor-54 .elementor-element.elementor-element-ecd4ddf {
-    padding: 0;
+    padding: 0 !important;
     margin: 0;
   }
 
