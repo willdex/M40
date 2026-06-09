@@ -10,14 +10,13 @@ const galleryImages = [
 ]
 
 const restaurantImages = [
-  '/static-assets/2024/09/tinto.png',
-  '/static-assets/2024/09/tigre.png',
-  '/static-assets/2024/09/oma.png',
-  '/static-assets/2024/09/naranja.png',
-  '/static-assets/2024/09/jaja.png',
-  '/static-assets/2024/09/bbb.png',
-  '/static-assets/2024/09/04-SERAFINA-1024x567-1.png',
-  '/static-assets/2024/09/03-MANGAROSA-1024x567-1.png'
+  '/static-assets/2024/09/M40_TINTO.png',
+  '/static-assets/2024/09/M40_HITO.png',
+  '/static-assets/2024/09/M40_OMA.png',
+  '/static-assets/2024/09/M40_JALEO.png',
+  '/static-assets/2024/09/M40_MANGAROSA.png',
+  '/static-assets/2024/09/M40_SERAFINA.png',
+  '/static-assets/2024/09/M40_BERNADETTE.png'
 ]
 
 export default function BocaPage() {
