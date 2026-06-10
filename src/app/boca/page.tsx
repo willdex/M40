@@ -16,7 +16,8 @@ const restaurantImages = [
   '/static-assets/2024/09/M40_JALEO.png',
   '/static-assets/2024/09/M40_MANGAROSA.png',
   '/static-assets/2024/09/M40_SERAFINA.png',
-  '/static-assets/2024/09/M40_BERNADETTE.png'
+  '/static-assets/2024/09/M40_BERNADETTE.png',
+  '/static-assets/2024/09/ultimo.png'
 ]
 
 export default function BocaPage() {
